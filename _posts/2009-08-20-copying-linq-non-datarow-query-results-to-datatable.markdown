@@ -11,7 +11,7 @@ How to use the results of a database query using Linq to fill a DataGrid? It sho
 
 {% highlight c# %}
 public static DataTable CopyToDataTable<T>(
-    this IEnumerable<T> source
+this IEnumerable<T> source
 )
 where T : DataRow
 {% endhighlight %}
@@ -23,17 +23,17 @@ DataTable dataTable = new DataTable();
 dataTable.TableName = "ResultsTable";
 dataTable.Columns.Add("User", typeof(string));
 dataTable.Columns.Add("TotalJobs", typeof(int));
-var query = /* your linq query comes here. no restrictions! */
+var query = /_ your linq query comes here. no restrictions! _/
 {% endhighlight %}
 
 we have the DataTable and the query set up. Now, the tricky part!
 
 {% highlight c# %}
 var results = query.Select(anonym => new Func<DataRow, int, int, DataRow>(
-    (DataRow row, int index, int count) => {
-        row["User"] = index;
-        row["TotalJobs"] = count;
-        return row;
+(DataRow row, int index, int count) => {
+row["User"] = index;
+row["TotalJobs"] = count;
+return row;
 })
 .Invoke(dataTable.NewRow(), anonym.Index, anonym.TotalJobs));
 results.ToList().ForEach(row => dataTable.Rows.Add(row));
@@ -41,6 +41,6 @@ results.ToList().ForEach(row => dataTable.Rows.Add(row));
 
 Absolutely a good piece of unreadable code :)
 
-_query _variable are your Linq query results, which may be an IEnumerable of some of your data entities or even a anonymous type. It doesn't matter! For each element of this enumeration, we're creating a DataRow and assigning some values to its columns. Then, we call _Invoke _to indeed invoke our anonymous delegate Func, passing in our anonymous type properties, that are used later to fill the `DataTable`.
+\_query \_variable are your Linq query results, which may be an IEnumerable of some of your data entities or even a anonymous type. It doesn't matter! For each element of this enumeration, we're creating a DataRow and assigning some values to its columns. Then, we call \_Invoke \_to indeed invoke our anonymous delegate Func, passing in our anonymous type properties, that are used later to fill the `DataTable`.
 
 You'll probably gonna need to read it a couple times to digest it a bit and still it will look "WTF did I really wrote this code?!?" after a couple days :)

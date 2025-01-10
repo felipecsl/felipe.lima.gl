@@ -1,0 +1,74 @@
+---
+layout: post
+title: "2023 Annual Review"
+date: 2024-01-18 10:31
+comments: true
+categories:
+---
+
+> 💡 “Being a parent is having a job where you’re on call 24/7/365 with an abusive boss who screams at your and can’t tell you what he wants. The best part is, you’re gonna love it.”
+
+Looking back 10 years from now, I think 2023 will probably be the one of the most important years of my adult life.
+
+I’ve never dreamed of or really wanted to have kids at all, at least not up until maybe a couple of years ago. I suddenly saw myself open to the idea and my wife pushed me over the edge, since she was clear that she wanted it. In fact, i’ve always dreaded the idea so much that I thought I never would want it.
+
+> _“Time is a flat circle” - Rust Cohle_
+
+I feel like life so far has been a 38 years long mental preparation for this moment. This is the true test of patience, resilience. I now see parenthood with completely different eyes. I never understood this crazy idea of sacrificing your own life, putting all other hopes and dreams on hold (at least temporarily) to raise this tiny creature.
+
+I may have read this somewhere or listened in a podcast, not sure when or where, but this idea stuck with me:
+
+> _“Becoming a parent is living the fullest experience of what it means to be a human being”._
+
+It’s like going to Disneyland but not riding the coolest, scariest ride (I’ve never been, honestly, so can’t confirm). It’s like playing Mortal Kombat but stopping short of killing the Shao Khan. Or M. Bison on Street Fighter. You get the picture.
+
+It’s one of the hardest things you can do, but it provides meaning and a sense of accomplishment in what could easily feel like a pointless and senseless existence. Not that this was the case for me, but I now definitely feel like having kids is one of the most tried and true ways to live a happy and meaningful life. Definitely not for everyone, though and I wouldn’t normally recommend it to people. The motivation has to be intrinsic, otherwise it doesn’t work.
+
+I now finally understand it.
+
+Anyways, 2023 hasn’t been a year of much reflection for me, for obvious reasons. I tried my best to stick to my systems and habits, but everything is basically thrown out the window when you have a baby waking you up, screaming at the top of their lungs at 2am, 4am, 6am, etc.
+
+Despite all the challenges, it’s been an incredibly rewarding and meaningful year.
+
+I still somehow found time to read some books here and there between feedings and diaper changes.
+
+## Favorite reads in 2023 📚
+
+- [Principles, Life and Work - Ray Dalio](https://www.amazon.com/Principles-Life-Work-Ray-Dalio/dp/1501124021/)
+- [Clear Thinking - Shane Parrish](https://www.amazon.com/Clear-Thinking-Turning-Ordinary-Extraordinary/dp/0593086112)
+- [Nonviolent Communication - Marshall Rosenberg](https://www.amazon.com/Nonviolent-Communication-Language-Life-Changing-Relationships/dp/189200528X) (planning to re-read in 2024)
+- [Broken Money - Lyn Alden](https://www.amazon.com/Broken-Money-Financial-System-Failing/dp/B0CNS7NQLD)
+
+## Favorite quotes ✍️
+
+> _“In order to be right, you must be willing to change your mind” - Shane Parrish_
+
+> _“People of the nation do not understand our banking and monetary system, for if they did, I believe there would be a revolution before tomorrow morning“ - Henry Ford_
+
+## Work 🚧
+
+> _"The first rule of any technology used in a business is that automation applied to an efficient operation will magnify the efficiency. The second is that automation applied to an inefficient operation will magnify the inefficiency.” - Bill Gates_
+
+In 2023 I’ve changed my view on remote work a bit. While I’ve always advocated for it, I now see clearly that the quote above makes perfect sense. A team or company with a malfunctioning process will only magnify the problem in a remote environment.
+
+Some of my friends are having to deal with companies who are enforcing a “return to work” policy 2-4 times per week and I know for sure I wouldn’t like to be in a situation where I’m forced to go to the office N times a week in order to keep my job. On the other hand, I’d like to have the option (but not the obligation) to go to the office when I feel the need to and if it’s convenient for me to do so. Some problems are just much much easier to be solved in person and you just don’t get the same team vibe, culture, trust and camraderie in a remote setting.
+
+It takes a lot of rigor and discipline for a remote team to function well, otherwise it just exposes the cracks in the system.
+
+In 2023 I’ve returned to having a full time employment with an early stage startup, [Alza](https://alza.app), a neobank whose mission resonated with me, empowering the latino population in the US to have access to banking and save for the future.
+
+I’ll write more on the subject in a future post but, for the time being I’ll just say that I enjoyed learning Go. I still wouldn’t trade Kotlin for it, though 🙂 Go’s error handling verbosity gets on my nerves.
+
+I haven’t spent much time at all working on [Huskly](https://huskly.finance) this year, since there were no hours left on my days (or energy, really), but I expect that to change in 2024.
+
+All in all, it was a year of personal growth for me, learning to be a father, to be more patient and to use my time more effectively and efficiently.
+
+## Personal life
+
+In 2023 we spent a lot of time in Brazil, which was nice since we escaped some of the Seattle winter, saw friends and family and allowed Elena to have exposure to a different culture and language. We want her to be fluent both in English and Portuguese, so we gotta start early.
+
+Flying with a baby turned out to be a real struggle, though, as I’ve [documented here](https://felipe.lima.gl/2023/09/23/overseas-travel-with-baby.html). We still have the return trip to go through.
+
+This year I’ve also faced more family health struggles, which are still ongoing. My mom’s health has been deteriorating fast and that’s drained a big chunk of my attention and energy on a daily basis.
+
+All in all, I’m grateful for all I have, my wife and daugher, friends, family. In 2024 I want to free up more of my time so I can spend more quality time with them.

@@ -34,5 +34,4 @@ string sDecryptedText = symEncryption.Decrypt(
 Console.WriteLine(sDecryptedText);
 ```
 
-
 Hope this helps someone :)

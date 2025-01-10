@@ -7,7 +7,6 @@ title: My first blog post
 wordpress_id: 41
 ---
 
-
 I've been lately playing with this blog, customizing preparing the floor for this first post. I've used for this, the [BlogEngine.NET](http://www.dotnetblogengine.net/), which seems to be very powerfull and versatile.
 
 I opted for a simple and clean dark look instead of a heavy fractal background image and transparency on posts, which was pretty cool, but bad for reading. For the title gradient look, I was inspired by a nice post in Tutorial9 website, which has some good web design tips and tutorials. [Check out](http://www.tutorial9.net/photoshop/5-pixel-popping-techniques/).

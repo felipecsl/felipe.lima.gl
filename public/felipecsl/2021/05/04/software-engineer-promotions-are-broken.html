@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-HWKXX1QDTX"
+  ></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+    gtag('config', 'G-HWKXX1QDTX');
+  </script>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>
+    Engineering promotions are broken
+  </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="The website and blog of Felipe Lima." />
+  <link
+    rel="canonical"
+    href="http://0.0.0.0:4000/2021/05/04/software-engineer-promotions-are-broken.html"
+  />
+  <link rel="stylesheet" href="/assets/main.css">
+  <!-- Custom CSS & Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&display=swap&family=Lora" rel="stylesheet">
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+
+
+  <body><header class="site-header">
+  <div class="wrapper"><a class="site-title brand-font" rel="author" href="/">
+      <svg width="50" height="75" viewBox="0 0 280 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M33.6286 206.456L152.117 33.4096L139.5 14.1795L9.57767 206.258L140.5 405.791L270.614 214.005L177.901 72.7057L131.307 142.365L144.374 162.281L179.044 111.043L246.662 214.097L140.797 369.786L33.6286 206.456Z" fill="#444" stroke="#444" stroke-width="15"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M56.864 163.486L69.7852 141.253L140.022 248.298L215.558 138.299L228.176 157.529L138.605 288.063L56.864 163.486Z" fill="#444" stroke="#444" stroke-width="15" stroke-miterlimit="2.61313"/>
+      </svg>
+    </a><nav class="site-nav">
+      <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+      <label for="nav-trigger">
+        <span class="menu-icon">
+          <svg viewBox="0 0 18 15" width="18px" height="15px">
+            <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z" />
+          </svg>
+        </span>
+      </label>
+
+      <div class="trigger"><a class="page-link" href="/about/">About me</a><a class="page-link" href="/archives/">Blog Archives</a><a class="page-link" href="/projects/">Projects</a><a class="page-link" href="/talks/">Talks</a></div>
+    </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper"><article
+  class="post h-entry"
+  itemscope
+  itemtype="http://schema.org/BlogPosting"
+>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">
+      Engineering promotions are broken
+    </h1>
+    <p class="post-meta"><time
+        class="dt-published"
+        datetime="2021-05-04T21:10:00+00:00"
+        itemprop="datePublished"
+      >
+        May 4, 2021
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody"><p><a href="https://felipecsl.com/2021/04/26/nobody-cares-about-your-beautiful-code.html">In my last article</a>, I briefly covered the misaligned incentives caused by the “move fast and break things” attitude, which causes code quality and maintainability to be an afterthought, incurring additional tech debt and developer frustration. This time, I want to dive deeper into why that happens and how we can fix this perennial issue in the tech industry.</p>
+
+<h3 id="engineering-levels">Engineering levels</h3>
+
+<p>Before we begin, we need to briefly talk about the engineering level system. The engineering levels (sometimes called “ladder”) framework is a well established process, used by most, if not all, of the biggest tech companies nowadays. I believe it was popularized by the company <a href="https://www.progression.fyi/f/rent-the-runway">Rent the Runway</a>. It was also covered in the book <a href="https://www.amazon.com/Managers-Path-Leaders-Navigating-Growth/dp/1491973897">The Manager’s Path</a>, which I’d recommend reading.</p>
+
+<p>In short, the ladder defines a set of levels and traits with different expectations for each level-trait combination, forming a matrix which codifies the expectations for engineers as they progress through their career at a given company. If you’re curious, <a href="http://levels.fyi">levels.fyi</a> mapped out how they compare between companies and is a great resource for understanding the market. As you acquire more knowledge and career experience, you start to “climb the ladder”, earning more responsibility and usually getting a pay raise each step of the way. The process of moving up through levels is called a promotion or “uplevel”.</p>
+
+<p>If you’d like to read more about it, I’d recommend checking Ben Yolken’s <a href="https://yolken.net/blog/stop-hiding-levels">excellent articles</a> on the topic. Today, I’d like to focus on the levels beyond Senior Engineer, eg. Staff, Principal, Distinguished, etc. and what’s wrong with how they currently work. Ben also wrote about the <a href="https://yolken.net/blog/senior-engineer-plateau">senior engineer plateau</a>, which is something I experienced for myself and is tangentially related to this article.</p>
+
+<h3 id="how-i-failed-to-get-a-promotion">How I failed to get a promotion</h3>
+
+<div class="text-center">
+  <img src="/images/2021/05/small-council.webp" alt="Calibration meeting" />
+  <small>Rare footage taken during a calibration meeting (<a target="_blank" href="https://gameofthrones.fandom.com/wiki/Small_council">source</a>)</small>
+</div>
+<p><br />
+The truth is, getting beyond Senior level is actually <strong>pretty challenging</strong>. I’ve been there. Here’s how I failed to get promoted.</p>
+
+<p>Let’s give my manager here the fictional name “Bob”. This is a true story and happened a number of years ago in a previous job. Bob and I chatted during our 1:1 about what I needed to focus on to make it to the next level. I start working on these things right away, feeling pumped and excited about the possibility of a promotion during the next review cycle. We chat about my progress regularly throughout the year and we both seem to agree that I’m on track. Then, perf season comes around and I carefully write my self review, highlighting my accomplishments, framing them in a way that demonstrates how they match the expectations for the next level. Things are all fine and dandy and Bob tells me I have a really good case for promotion. Now, my destiny is in his hands.</p>
+
+<p>Bob brings my review package to calibration, where my performance is assessed against other engineers by managers and leaders who probably never heard my name and are not familiar with my work. Bob (supposedly) tries to vouch for my work and makes the case for promoting me to Staff level. Something is not quite right though. Charlie, who’s a manager in a different org and who has lots of really bright and top performing engineers under him, doesn’t seem to agree that my work is up to standards for Staff level. I don’t know exactly what happened during calibration though. I wasn’t there, plus that’s confidential. Bob was representing me, but ultimately the decision was made by a group of people who don’t know me, who probably never read my code or even heard about me.</p>
+
+<p>This is how I got disappointed by not getting promoted when I thought that I had a really good case for it. This happened again similarly on the following review cycle, I got frustrated and disappointed again. Eventually, I stopped caring about promotions and just focused on doing my job. A few months later, frustration started building up and I eventually quit. 😂. This problem is not new and has also been illustrated in Michael Lynch’s fantastic <a href="https://mtlynch.io/why-i-quit-google/">“Why I quit Google”</a> article.</p>
+
+<p>You don’t have to think too hard to see a lot of problems with the calibration approach. On top of that, add a list of highly subjective expectations for staff engineers and you have a process that ends up being highly arbitrary and decided based on unconscious biases, politics and personal preferences.</p>
+
+<blockquote>
+  <p>Calibration meetings are ineffective at highlighting engineers achievements since they are not able to advocate for their own work. Performance evaluation for higher levels is often arbitrary and decisions are based on unconscious biases, office politics and personal preferences.</p>
+</blockquote>
+
+<p>Below are some of the most common traits that are part of performance evaluation for engineers and my observations about each of them.</p>
+
+<h3 id="scope-and-impact">Scope and Impact</h3>
+
+<p>These are probably the easiest traits to evaluate since it’s possible to back up any claims with concrete metrics and data. However, the undesirable side effect of this is that engineers will tend to neglect work that either cannot be easily measured (eg.: refactoring, cleaning up tech debt) or that does not fit into that shape and form that looks good during performance review.</p>
+
+<h3 id="productivity-getting-stuff-done-technical-ability">Productivity, getting stuff done, technical ability</h3>
+
+<p>These tend to be more subjective and harder to measure, however it is still possible to have a good sense of how a person is performing by just asking their teammates. One could arguably use metrics like number of merged pull requests, code quality, etc. as a proxy for productivity and technical ability, although I’m not a fan of those. Many of the best engineers I know who were highly skilled and competent didn’t necessarily push the most amount of code.</p>
+
+<h3 id="visibility-influence-and-cross-collaboration">Visibility, influence and cross collaboration</h3>
+
+<p>For staff level and beyond, it is usually very important to demonstrate an ability to collaborate outside of one’s own projects, team and sometimes even across multiple organizations. While on the surface that seems to make sense, in practice it’s really hard to make a fair judgement about this because, ultimately, it’s based on “who knows you”. More extroverted and sociable engineers will usually have a head start on this criteria. It also creates a questionable incentive for engineers to over-publicize their work via<a href="https://jvns.ca/blog/brag-documents/"> brag documents</a>, weekly<a href="https://qz.com/work/1516573/the-5-15-is-an-easy-way-to-improve-communication-at-work/"> 5:15</a>s, shipped emails, regular 1:1s with people outside of their direct team, etc. While some of these practices are probably beneficial for overall communication, they may become a burden and a distraction from focusing on your actual work.</p>
+
+<p>Ultimately, based on my observations, the higher your level, the harder it becomes to accurately judge these traits. The ladder descriptions also seem to get much more vague and it’s tougher to have a concrete sense of how to achieve these in practice. It’s understandable that companies want to be selective about who to promote, though.</p>
+
+<div style="margin-bottom: 40px">
+  <blockquote>
+    <p>All these factors combined tend to foster a highly competitive environment where engineers are encouraged to work harder and harder towards a moving promotion target, usually until they eventually burnout and quit.</p>
+  </blockquote>
+</div>
+<hr />
+
+<p><br />
+Demonstrating the skills, working on the right project and performing at a staff level is not enough, though. As illustrated by my story above, finding a sponsor is likely just as important. Since that person is usually your manager, It’s crucial that you’re both well aligned on your career aspirations. If you really want to dive deeper into this challenge, Will Larson goes into much more depth in his great book <a href="https://www.amazon.com/Staff-Engineer-Leadership-beyond-management-ebook/dp/B08RMSHYGG">Staff Engineer: Leadership beyond the management track</a>.</p>
+
+<h3 id="how-can-we-fix-this">How can we fix this?</h3>
+
+<p>Getting to staff level shouldn’t be this hard. I believe there is a lot of room for improvement, simplifying and making the requirements clearer and much more objective. It’s not entirely obvious how we can get out of this mess, but I have some ideas.</p>
+
+<p>First, I think your teammates, the people who work with you every day and who are very familiar with your work are the ones who are best equipped to vouch for your work. I’d focus a lot more on making peer reviews more useful and constructive.</p>
+
+<p>Second, companies could be run more like DAOs (<a href="https://www.investopedia.com/tech/what-dao/">decentralized autonomous organizations</a>). A great example here is <a href="https://makerdao.com/">MakerDAO</a>, a decentralized community that uses the <a href="https://community-development.makerdao.com/en/learn/governance/mkr-token">MKR token</a> for governance. Maker (MKR) holders can <a href="https://vote.makerdao.com/">vote</a> on proposals using an Ethereum smart contract. These tokens are analogous to shares of a company stock, where shareholders (employees) would be allowed to vote on proposals (eg.: promotions). This would imply that many details that are now private (eg.: compensation, levels, equity distribution) should be made public. Maybe in the future, companies will issue digital tokens on a public blockchain that users and early adopters could buy, instead of the current IPO model. This is already the standard in the <a href="https://www.coindesk.com/what-is-defi">DeFi</a> space and we have many successful examples like <a href="https://uniswap.org/">Uniswap</a>, <a href="https://compound.finance/">Compound</a>, and <a href="https://chain.link/">Chainlink</a>.</p>
+
+<p>I think this would be a net positive change towards more transparency in the workplace. This is of course not an easy problem to solve and we’re still just scratching the surface of what could be done.</p>
+
+<p>What are your thoughts on all this?</p>
+
+<h3 id="acknowledgements">Acknowledgements</h3>
+
+<p>I’d like to thank <a href="http://thiagoghisi.com/">Thiago Ghisi</a> for reviewing and providing feedback on this article.</p>
+</div>
+  <hr class="post-bottom-separator" />
+  <script
+    async
+    data-uid="f5e0a95197"
+    src="https://marvelous-builder-9321.ck.page/f5e0a95197/index.js"
+  ></script>
+
+  <a class="u-url" href="/2021/05/04/software-engineer-promotions-are-broken.html" hidden></a>
+</article>
+</div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li>
+    <a href="https://github.com/felipecsl"
+      ><svg class="svg-icon grey">
+        <use
+          xlink:href="/assets/minima-social-icons.svg#github"
+        ></use>
+      </svg>
+      <span class="username">Github</span></a
+    >
+  </li><li>
+    <a
+      href="https://www.linkedin.com/in/felipecsl"
+      ><svg class="svg-icon grey">
+        <use
+          xlink:href="/assets/minima-social-icons.svg#linkedin"
+        ></use>
+      </svg>
+      <span class="username">LinkedIn</span></a
+    >
+  </li><li>
+    <a
+      href="https://twitter.com/felipecsl"
+      ><svg class="svg-icon grey">
+        <use
+          xlink:href="/assets/minima-social-icons.svg#twitter"
+        ></use>
+      </svg>
+      <span class="username">Twitter</span></a
+    >
+  </li><li>
+    <a href="https://medium.com/@felipecsl">
+      <img
+        class="svg-icon grey"
+        src="/images/medium.svg"
+      />
+      <span class="username">Medium</span></a
+    >
+  </li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>The website and blog of Felipe Lima.</p>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>
+          <a href="https://github.com/felipecsl/felipecsl.com" target="_blank">Proudly open source ☕️</a>
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+</footer><script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
+  </body>
+</html>

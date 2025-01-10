@@ -6,10 +6,10 @@ slug: opcoes-de-hospedagem-para-ruby
 title: Opções de hospedagem para Ruby
 wordpress_id: 45
 tags:
-- hospedagem
-- rails
-- ruby
-- sinatra
+  - hospedagem
+  - rails
+  - ruby
+  - sinatra
 ---
 
 Na Quavio, empresa onde trabalho e sou um dos sócios, uma boa parcela dos projetos executados são basicamente sites e hotsites de clientes. Isto implica em necessidades específicas de hospedagem, como por exemplo, uma boa infraestrutura para envio/recebimento de emails (com webmail), painel de controle, suporte técnico para eventuais problemas de instabilidade, baixo custo mensal, pouca utilização de espaço em disco, backup automático, etc. Basicamente, não queremos nos responsabilizar pelo gerenciamento da infra-estrutura que abriga cada um destes projetos, que acabam se tornando muitos com o passar do tempo.

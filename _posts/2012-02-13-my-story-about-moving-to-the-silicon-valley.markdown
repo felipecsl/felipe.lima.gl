@@ -6,12 +6,12 @@ slug: my-story-about-moving-to-the-silicon-valley
 title: My story about moving to the Silicon Valley
 wordpress_id: 100
 tags:
-- career
-- gogobot
-- life
-- silicon valley
-- thoughtworks
-- visa
+  - career
+  - gogobot
+  - life
+  - silicon valley
+  - thoughtworks
+  - visa
 ---
 
 A lot of people I meet seem very curious and I am usually asked some details about how the hell I left my job at [ThoughtWorks](http://thoughtworks.com) Brazil and moved to San Francisco to work for [Gogobot](http://gogobot.com/). Overall, the transition was pretty simple. Getting the H1B visa was a lot simpler and faster than I expected. It took me around 2 months from the date Gogobot entered the petition to the US Gov. to the day I got my passport back with the visa stamped on it. However I was a bit lucky, since there is an early quota of 60 thousand H1B visas that US will distribute, starting every year in April. I applied around October, so the quota was almost over, but I was lucky enough to make it. Another friend that applied a few weeks later wasn't so lucky and will have to wait till April till the window opens again.

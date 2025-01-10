@@ -12,7 +12,7 @@ how much we've accomplished. I'll cover here what actually got done, how it went
 next for me.
 
 I haven't written a single blog post in almost a year, since my last [retrospective](https://felipecsl.com/2021/12/05/2021-retrospective.html).
-which is an indication of how busy I've been at QuickNode. We built *a lot of stuff* from the ground
+which is an indication of how busy I've been at QuickNode. We built _a lot of stuff_ from the ground
 up and that took a big amount of energy and focus.
 
 ## How it started
@@ -30,7 +30,7 @@ building for Twitter at the time, which ended up becoming the current incarnatio
 It started as a [JSON RPC](https://www.jsonrpc.org/specification) API for NFT token ownership
 verification on Ethereum, so that Twitter could continuously ensure that users still owned the NFT
 tokens that they claimed as their profile avatars. This quickly grew to encompass a lot more than
-just ownership  verification, including more features and other chains, like Solana, for example.
+just ownership verification, including more features and other chains, like Solana, for example.
 We also built a brand new Ethereum blockchain indexer completely from scratch, which now powers both
 the NFT API and the, recently launched, Ethereum (fungible) [ERC-20 token API](https://www.quicknode.com/token-api).
 

@@ -9,7 +9,7 @@ wordpress_id: 23
 
 While trying to use the Session state dictionary in a web application, you may eventually receive the following exception:
 
-**Session state can only be used when enableSessionState is set to true, ****either in a configuration file or in the Page directive. Please also make sure that System.Web.SessionStateModule or a custom session state module is included in the <configuration>\<system.web>\<httpModules> ****section in the application configuration.**
+**Session state can only be used when enableSessionState is set to true, \*\***either in a configuration file or in the Page directive. Please also make sure that System.Web.SessionStateModule or a custom session state module is included in the <configuration>\<system.web>\<httpModules> \***\*section in the application configuration.**
 
 To my surprise, session state has to be enabled before it can be used. I followed some steps that I found while digging for the solution online that might be helpful:
 

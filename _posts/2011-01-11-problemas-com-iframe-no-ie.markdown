@@ -6,10 +6,10 @@ slug: problemas-com-iframe-no-ie
 title: Problemas com IFrame no IE?
 wordpress_id: 67
 tags:
-- ie
-- iframe
-- p3p
-- segurança
+  - ie
+  - iframe
+  - p3p
+  - segurança
 ---
 
 Pois é. Você não é o único. Apesar de funcionar às mil maravilhas em outros navegadores, o IE parece considerar o IFrame uma ameaça de segurança e se recusa a aceitar cookies de sites de terceiros dentro de um IFrame. Legal né? Isto dificulta qualquer tentativa de colocar um formulário de login dentro de um IFrame, por exemplo ou, ainda mais comum, colocar a janela de pagamento de um gateway (no meu caso, [PagSeguro](https://pagseguro.uol.com.br/)) dentro de um IFrame funcionando como uma sobretela. Isto funciona perfeitamente, mas não no IE.
@@ -18,9 +18,7 @@ A questão toda é que o IE não irá aceitar nenhum cookie do PagSeguro, pois e
 
 Exemplo:
 
-
     response["P3P"] = 'CP="IDC DSP COR ADM DEVi TAIi PSA PSD IVAi IVDi CONi HIS OUR IND CNT"'
-
 
 Cada uma destas siglas de 3 ou 4 letras acima tem um significado, como por exemplo, expor como o site utiliza os dados do usuário. Esta propriedade deve ser incluida no cabeçalho de todas as páginas que setam um cookie no browser. Mais informações [aqui](http://stackoverflow.com/questions/389456/cookie-blocked-not-saved-in-iframe-in-internet-explorer) e [aqui](http://adamyoung.net/IE-Blocking-iFrame-Cookies).
 

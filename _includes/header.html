@@ -1,10 +1,14 @@
 <header class="site-header">
-
   <div class="wrapper">
     {%- assign default_paths = site.pages | map: "path" -%}
     {%- assign page_paths = site.header_pages | default: default_paths -%}
     {%- assign titles_size = site.pages | map: 'title' | join: '' | size -%}
-    <a class="site-title brand-font" rel="author" href="{{ "/" | relative_url }}">felipecsl</a>
+    <a class="site-title brand-font" rel="author" href="{{ "/" | relative_url }}">
+      <svg width="50" height="75" viewBox="0 0 280 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M33.6286 206.456L152.117 33.4096L139.5 14.1795L9.57767 206.258L140.5 405.791L270.614 214.005L177.901 72.7057L131.307 142.365L144.374 162.281L179.044 111.043L246.662 214.097L140.797 369.786L33.6286 206.456Z" fill="#444" stroke="#444" stroke-width="15"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M56.864 163.486L69.7852 141.253L140.022 248.298L215.558 138.299L228.176 157.529L138.605 288.063L56.864 163.486Z" fill="#444" stroke="#444" stroke-width="15" stroke-miterlimit="2.61313"/>
+      </svg>
+    </a>
 
     {%- if titles_size > 0 -%}
     <nav class="site-nav">

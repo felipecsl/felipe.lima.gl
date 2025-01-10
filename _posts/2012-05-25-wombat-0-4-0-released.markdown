@@ -6,10 +6,10 @@ slug: wombat-0-4-0-released
 title: Wombat 0.4.0 released!
 wordpress_id: 109
 tags:
-- gem
-- opensource
-- ruby
-- wombat
+  - gem
+  - opensource
+  - ruby
+  - wombat
 ---
 
 It has been a while since I've been working on this Ruby [gem](https://rubygems.org/gems/wombat) called [wombat](https://github.com/felipecsl/wombat) and thought it would be worth talking about it here. I just released today the version 0.4.0 with some bug fixes and the addition of another helper method, as you can see in the GitHub [readme](https://github.com/felipecsl/wombat).
@@ -23,7 +23,5 @@ Anyway, if Wombat is/was useful for you, please don't hesitate to drop me a line
 After meeting great people like [Paul Irish](https://twitter.com/#!/paul_irish) and [Yehuda Katz](https://twitter.com/#!/wycats), you kinda feel almost obligated to share some knowledge with your peers and give back to the open source community.
 
 By the way, if you work with Resque, you should probably also check the great [perform_later](https://github.com/kensodev/perform_later) gem by my friend and coworker [Avi Tzurel](http://kensodev.com/), to which I also have been contributing.
-
-
 
 Cheers!

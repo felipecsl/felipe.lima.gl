@@ -6,7 +6,7 @@ layout: home
 ---
 
 <div class="hero">
-  <img class="about-avatar" src="/images/avatar-2022-bw.png"/>
+  <img class="about-avatar" src="/images/avatar-2023-bw.jpg"/>
   <div class="intro-bio">
     <h1 class="brand-font">Felipe Lima</h1>
     <p>
@@ -23,42 +23,42 @@ layout: home
 <h1>Recent Articles</h1>
 <ul class="post-list">
   <li>
-    <span class="post-meta">Jan 16, 2023</span>
+    <span class="post-meta">Aug 14, 2024</span>
+    <h3>
+      <a class="post-link" href="/2024/08/14/reframing-expectations.html">
+        Reframing Expectations
+      </a>
+    </h3>
+  </li>
+  <li>
+    <span class="post-meta">Jan 18, 2024</span>
+    <h3>
+      <a class="post-link" href="/2024/01/18/2023-annual-review.html">
+        2023 Annual Review
+      </a>
+    </h3>
+  </li>
+  <li>
+    <span class="post-meta">Sept 23, 2023</span>
+    <h3>
+      <a class="post-link" href="/2023/09/23/overseas-travel-with-baby.html">
+        Overseas travel with a baby, for dummies
+      </a>
+    </h3>
+  </li>
+  <li>
+    <span class="post-meta">May 13, 2023</span>
+    <h3>
+      <a class="post-link" href="/2023/05/13/moving-to-lima-gl.html">
+        Domain names and branding
+      </a>
+    </h3>
+  </li>
+  <li>
+    <span class="post-meta">Jan 13, 2023</span>
     <h3>
       <a class="post-link" href="/2023/01/13/2022-annual-review.html">
         2022 Annual Review
-      </a>
-    </h3>
-  </li>
-  <li>
-    <span class="post-meta">Nov 6, 2022</span>
-    <h3>
-      <a class="post-link" href="/2022/11/06/tolerance.html">
-        Tolerance
-      </a>
-    </h3>
-  </li>
-  <li>
-    <span class="post-meta">Sept 14, 2022</span>
-    <h3>
-      <a class="post-link" href="/2022/09/14/hello-huskly.html">
-        Hello Huskly
-      </a>
-    </h3>
-  </li>
-  <li>
-    <span class="post-meta">Aug 27, 2022</span>
-    <h3>
-      <a class="post-link" href="/2022/08/27/a-new-beginning.html">
-        A New Beginning
-      </a>
-    </h3>
-  </li>
-  <li>
-    <span class="post-meta">Dec 7, 2021</span>
-    <h3>
-      <a class="post-link" href="/2021/12/05/2021-retrospective.html">
-        2021 Retrospective
       </a>
     </h3>
   </li>

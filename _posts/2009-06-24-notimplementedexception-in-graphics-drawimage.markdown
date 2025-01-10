@@ -7,7 +7,6 @@ title: NotImplementedException in Graphics.DrawImage
 wordpress_id: 33
 ---
 
-
 It is a bit weird to notice that a .Net Framework method returns `NotImplementedException`.
 At least it was for me, mainly because it is not documented anywhere in the msdn documentation.
 
@@ -28,13 +27,10 @@ It turns out that `Graphics.DrawImage` throws this exception when an Image objec
         e.HasMorePages = false;
     }
 
-
 Weird, eh?! So, the solution?
 
     Bitmap img = (Bitmap)Image.FromFile(fileName);
 
-
 Bitmap class extends Image, so, IMHO, `DrawImage` should determine in runtime that the image passed in is actually is a Bitmap and do whatever it has to do, but, strangely, it complains and throws a NotImplementedException for the exactly same runtime object.
-
 
 Can anyone explain what is happening here?

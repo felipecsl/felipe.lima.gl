@@ -48,8 +48,15 @@ a:focus {
 }
 
 .site-header {
-  border-top: 5px solid #53131e;
+  padding-top: 10px;
   margin-bottom: 0;
+}
+.site-nav .page-link:not(:last-child) {
+  margin-right: 40px;
+}
+.footer-col-3 {
+  width: -webkit-calc(50% - (30px / 2));
+  width: calc(50% - 30px / 2);
 }
 
 .site-header .navbar-brand {
@@ -92,9 +99,15 @@ a:focus {
     border-bottom: 0;
     letter-spacing: 1px;
     background: 0 0;
-    -webkit-transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
-    -moz-transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
-    transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
+    -webkit-transition:
+      background 0.5s ease-in-out,
+      padding 0.5s ease-in-out;
+    -moz-transition:
+      background 0.5s ease-in-out,
+      padding 0.5s ease-in-out;
+    transition:
+      background 0.5s ease-in-out,
+      padding 0.5s ease-in-out;
   }
 
   .top-nav-collapse {
@@ -331,20 +344,29 @@ pre {
 }
 
 .brand-font {
-  font-family: "Passion One", cursive;
+  font-family: "Cormorant Garamond", serif;
 }
 
 .site-title {
-  letter-spacing: 1px;
-  font-size: 28px;
-  border-radius: 0 0 5px 5px;
-  padding: 0 15px;
-  background: #53131e;
-  color: #ffefbd !important;
+  align-items: center;
+  flex: 1;
+  display: flex;
 }
 
 .svg-icon {
   fill: #eadadd;
+}
+.site-header {
+  min-height: auto;
+}
+header .wrapper {
+  display: flex;
+}
+.wrapper nav {
+  display: flex;
+  flex-grow: 1;
+  justify-content: end;
+  align-items: center;
 }
 
 .projects {
@@ -359,10 +381,14 @@ pre {
       -webkit-transition: -webkit-box-shadow 0.25s;
       transition: -webkit-box-shadow 0.25s;
       transition: box-shadow 0.25s;
-      transition: box-shadow 0.25s, -webkit-box-shadow 0.25s;
+      transition:
+        box-shadow 0.25s,
+        -webkit-box-shadow 0.25s;
       border-radius: 2px;
-      box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1),
-        0 1px 1px -2px rgba(0, 0, 0, 0.1), 0 1px 5px 0 rgba(0, 0, 0, 0.1);
+      box-shadow:
+        0 1px 1px 0 rgba(0, 0, 0, 0.1),
+        0 1px 1px -2px rgba(0, 0, 0, 0.1),
+        0 1px 5px 0 rgba(0, 0, 0, 0.1);
       padding: 16px 24px;
       width: 43%;
       height: 150px;
@@ -521,4 +547,10 @@ blockquote {
 li {
   line-height: 1.8;
   font-size: 18px;
+}
+
+article.post,
+.archive,
+.projects {
+  margin-top: 60px;
 }

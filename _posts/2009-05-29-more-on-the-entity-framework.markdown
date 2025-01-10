@@ -7,7 +7,6 @@ title: More on the Entity Framework
 wordpress_id: 39
 ---
 
-
 In my last blog post I wrote a quick introduction on the Entity Framework. I've been playing with it for the last couple days. I must say I had a bit of a hard time trying to make it work. The good part is that I discovered some nice stuff when searching for solutions.
 
 With Linq, you are able to build a query predicate dinamically with the extension method IQueryable<TSource> Where<TSource>:

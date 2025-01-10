@@ -6,4 +6,3 @@ comments: true
 external_url: https://medium.com/@felipecsl/creating-an-android-app-for-beginners-part-i-410a7a64d9b1
 external_site: medium
 ---
-

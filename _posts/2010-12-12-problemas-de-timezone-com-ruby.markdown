@@ -6,9 +6,9 @@ slug: problemas-de-timezone-com-ruby
 title: Problemas de Timezone com Ruby?
 wordpress_id: 63
 tags:
-- datetime
-- ruby
-- timezone
+  - datetime
+  - ruby
+  - timezone
 ---
 
 Timezones podem ser uma dor de cabeça quando trabalhamos muito com datas. Em ruby, existem pelo menos três classes diferentes para manipulação de data/hora: Date, Time e DateTime.
@@ -19,7 +19,7 @@ Isto se torna um problema quando precisamos comparar datas, que vêm do banco de
 
 Para solucionar o problema, precisamos normalizar os dois objetos para o mesmo timezone. Resolvemos isto utilizando o método Time.utc, que monta um novo objeto Time baseado no UTC:
 
-``` ruby
+```ruby
 module ApplicationHelper
   def self.get_utc_time
     now = Time.now

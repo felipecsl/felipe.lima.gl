@@ -6,20 +6,16 @@ slug: traduzindo-html-utilizando-a-api-do-google-translate
 title: Traduzindo HTML utilizando a API do Google Translate
 wordpress_id: 59
 tags:
-- asp.net mvc
-- google translate
-- jquery
+  - asp.net mvc
+  - google translate
+  - jquery
 ---
 
 Pessoal,
 
 Para quem quiser utilizar a API do Google Translate para traduzir partes de um documento HTML, segue uma implementação que tive que fazer recentemente utilizando jQuery e ASP.NET MVC:
 
-
-
-
-  * Controller Action para fazer o request para a API REST:
-
+- Controller Action para fazer o request para a API REST:
 
 ```c#
 [ValidateInput(false)]
@@ -54,17 +50,11 @@ return Content(sr.ReadToEnd().Trim(), "text/json");
 
 Algumas considerações sobre esta action:
 
+- Não estamos validando o parâmetro **q** de entrada. Seria interessante validar a presença deste parâmetro no form e lançar uma exceção caso ele não esteja presente;
 
+- Não esqueça de passar para o parâmetro **key** a sua chave da API do google;
 
-
-  * Não estamos validando o parâmetro **q** de entrada. Seria interessante validar a presença deste parâmetro no form e lançar uma exceção caso ele não esteja presente;
-
-
-  * Não esqueça de passar para o parâmetro **key** a sua chave da API do google;
-
-
-  * Uma melhoria seria receber via form também o código do idioma fonte e destino (parâmetros **source** e **target** da URL).
-
+- Uma melhoria seria receber via form também o código do idioma fonte e destino (parâmetros **source** e **target** da URL).
 
 Vamos agora para o código de cliente (JavaScript) para atualizar a view:
 
@@ -72,26 +62,25 @@ Vamos agora para o código de cliente (JavaScript) para atualizar a view:
 var translateUrl = '<%= Url.Action("Translate") %>';
 
 $(function () {
-translateElement("caseText");
-translateElement("caseTitle");
+  translateElement("caseText");
+  translateElement("caseTitle");
 });
-
 
 function translateElement(elemId) {
-$.ajax({
-url: translateUrl,
-dataType: 'json',
-type: 'POST',
-data: {
-q: $("#" + elemId).html()
-},
-success: function (json) {
-// TODO: I've found that the returned translated text from Google may be incomplete
-// if we send any   elements within the text. We should remove any occurrences
-// of this in the input string.
-$("#" + elemId).html(unescape(json.data.translations[0].translatedText));
-}
-});
+  $.ajax({
+    url: translateUrl,
+    dataType: "json",
+    type: "POST",
+    data: {
+      q: $("#" + elemId).html(),
+    },
+    success: function (json) {
+      // TODO: I've found that the returned translated text from Google may be incomplete
+      // if we send any   elements within the text. We should remove any occurrences
+      // of this in the input string.
+      $("#" + elemId).html(unescape(json.data.translations[0].translatedText));
+    },
+  });
 }
 ```
 

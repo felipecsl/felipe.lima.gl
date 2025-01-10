@@ -7,7 +7,6 @@ title: EF ObjectContext.Attach and ObjectStateManager
 wordpress_id: 32
 ---
 
-
 When working with the Entity Framework, you've got to be extremely careful when exchanging Entities between different ObjectContexts. You probably know that if you want to modify an Entity which is already added to the database, you have to first attach it to the context before modifying it, so that EF can keep track of the changes you made to that instance and save them to the database later. There is a good reference page at msdn about [attaching related objects](http://msdn.microsoft.com/en-us/library/bb896271.aspx).
 
 Attach assumes your Entity has not been changed while it was not being tracked by the ObjectContext. Otherwise, call **ApplyPropertyChanges** to attach and apply the changes.
@@ -36,7 +35,7 @@ public void UpdateUserBooks(User _user) {
 }
 ```
 
-What is happening? Your userBook query returns all the Books from the database **AND** their related Users (the Include was there for a reason). When you try to attach your User after_user after the query has been run, the ObjectContext already has _user under its hood, so trying to Attach it will throw an InvalidOperationException.
+What is happening? Your userBook query returns all the Books from the database **AND** their related Users (the Include was there for a reason). When you try to attach your User after_user after the query has been run, the ObjectContext already has \_user under its hood, so trying to Attach it will throw an InvalidOperationException.
 
 The solution is very simple: Always attach all your Entities before doing any operation/query in your ObjectContext. This way, you avoid any double-tracking request. If the ObjectContext needs your Entity later, it will retrieve the instance you attached before and you're good to go! Follow the fixed code:
 

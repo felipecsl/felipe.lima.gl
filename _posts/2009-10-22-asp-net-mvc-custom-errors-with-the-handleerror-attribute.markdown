@@ -7,9 +7,7 @@ title: ASP.NET MVC custom errors with the HandleError attribute
 wordpress_id: 18
 ---
 
-
 Handling exceptions in ASP.NET MVC is quite easy once you get to know the details surrounding the `HandleError` attribute. You can specify that a controller or a specific Action will handle errors and you can even choose which View to show based on the exception being thrown. Scott Guthrie [wrote](http://weblogs.asp.net/scottgu/archive/2008/07/14/asp-net-mvc-preview-4-release-part-1.aspx) about this.
-
 
 What he didn't tell us, is that there are some prerequisites for it to work as expected. First of all, you need to enable custom errors in the application web.config file:
 
@@ -17,9 +15,7 @@ What he didn't tell us, is that there are some prerequisites for it to work as e
 <customErrors mode="On" />
 ```
 
-
 Second, the order that you put the HandleError attributes will affect which View will actualy gonna be rendered at the end. I was trying to render a custom view based on an InvalidOperationException being throw on my action. The code looked like this:
-
 
 ```c#
 

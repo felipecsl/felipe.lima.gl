@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-HWKXX1QDTX"
+  ></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+    gtag('config', 'G-HWKXX1QDTX');
+  </script>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>
+    Handling Animated GIFs with Android the right way
+  </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="The website and blog of Felipe Lima." />
+  <link
+    rel="canonical"
+    href="http://0.0.0.0:4000/2013/08/20/animated-gifs-with-android.html"
+  />
+  <link rel="stylesheet" href="/assets/main.css">
+  <!-- Custom CSS & Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&display=swap&family=Lora" rel="stylesheet">
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+
+
+  <body><header class="site-header">
+  <div class="wrapper"><a class="site-title brand-font" rel="author" href="/">
+      <svg width="50" height="75" viewBox="0 0 280 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M33.6286 206.456L152.117 33.4096L139.5 14.1795L9.57767 206.258L140.5 405.791L270.614 214.005L177.901 72.7057L131.307 142.365L144.374 162.281L179.044 111.043L246.662 214.097L140.797 369.786L33.6286 206.456Z" fill="#444" stroke="#444" stroke-width="15"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M56.864 163.486L69.7852 141.253L140.022 248.298L215.558 138.299L228.176 157.529L138.605 288.063L56.864 163.486Z" fill="#444" stroke="#444" stroke-width="15" stroke-miterlimit="2.61313"/>
+      </svg>
+    </a><nav class="site-nav">
+      <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+      <label for="nav-trigger">
+        <span class="menu-icon">
+          <svg viewBox="0 0 18 15" width="18px" height="15px">
+            <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z" />
+          </svg>
+        </span>
+      </label>
+
+      <div class="trigger"><a class="page-link" href="/about/">About me</a><a class="page-link" href="/archives/">Blog Archives</a><a class="page-link" href="/projects/">Projects</a><a class="page-link" href="/talks/">Talks</a></div>
+    </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper"><article
+  class="post h-entry"
+  itemscope
+  itemtype="http://schema.org/BlogPosting"
+>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">
+      Handling Animated GIFs with Android the right way
+    </h1>
+    <p class="post-meta"><time
+        class="dt-published"
+        datetime="2013-08-20T21:05:00+00:00"
+        itemprop="datePublished"
+      >
+        Aug 20, 2013
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody"><p>Working with animated GIFs on Android can be a painful task. In the <a href="https://play.google.com/store/apps/details?id=com.weheartit">We Heart It app</a> we deal with a lot of images, but also animated GIFs. Since we support Android back to API Level 8 (2.2), <code class="language-plaintext highlighter-rouge">WebView</code> is by far the simplest solution, however is not an option for us, since it <a href="https://code.google.com/p/android/issues/detail?id=3422">doesn’t work</a> on most of older Android versions.</p>
+
+<p>By looking at this excellent tutorial by <a href="http://droid-blog.net/2011/10/15/tutorial-how-to-play-animated-gifs-in-android-%E2%80%93-part-2/">Johannes Borchardt</a>, I decided to take <code class="language-plaintext highlighter-rouge">GifDecoder</code> approach, which seems to be the most reliable solution. However, the <a href="https://code.google.com/p/android-gifview/source/browse/trunk/GifPlayer/src/jp/tomorrowkey/android/gifplayer/GifDecoder.java">GifDecoder</a> class suggested by Johannes is not very memory efficient since it keeps in memory the bitmap data for every frame in the GIF.</p>
+
+<p>By doing some more research, I found this great <a href="https://gist.github.com/devunwired/4479231">gist</a> with an optimized implementation of <code class="language-plaintext highlighter-rouge">GifDecoder</code> that, as described there, “decodes images on-the-fly, and only the minimum data to create the next frame in the sequence is kept”.</p>
+
+<p>The class interface is however not exactly the same as the one exposed by the original <code class="language-plaintext highlighter-rouge">GifDecoder</code> class provided, thus the <code class="language-plaintext highlighter-rouge">GifDecoderView</code> class had to be adjusted. I made the adjustments required to interact with this version and also start/stop the animation. By default it will loop the GIF animation, even if the view is not on the screen, so you have to be careful to call <code class="language-plaintext highlighter-rouge">startAnimation()</code> and <code class="language-plaintext highlighter-rouge">stopAnimation()</code> correctly to avoid GIFs playing in the background, which can eat up all your memory very quickly.</p>
+
+<p>My interaction looks basically like this:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="c1">// In my fragment class...</span>
+
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onCreate</span><span class="o">()</span> <span class="o">{</span>
+    <span class="n">gifView</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">GifDecoderView</span><span class="o">(</span><span class="n">getActivity</span><span class="o">());</span>
+    <span class="n">gifView</span><span class="o">.</span><span class="na">setBytes</span><span class="o">(</span><span class="n">bitmapData</span><span class="o">);</span>
+    <span class="n">gifView</span><span class="o">.</span><span class="na">startAnimation</span><span class="o">();</span>
+  <span class="o">}</span>
+
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setUserVisibleHint</span><span class="o">(</span><span class="kt">boolean</span> <span class="n">isVisibleToUser</span><span class="o">)</span> <span class="o">{</span>
+    <span class="kd">super</span><span class="o">.</span><span class="na">setUserVisibleHint</span><span class="o">(</span><span class="n">isVisibleToUser</span><span class="o">);</span>
+
+    <span class="k">if</span> <span class="o">(!</span><span class="n">isVisibleToUser</span><span class="o">)</span> <span class="o">{</span>
+      <span class="n">gifView</span><span class="o">.</span><span class="na">stopAnimation</span><span class="o">();</span>
+    <span class="o">}</span>
+  <span class="o">}</span>
+</code></pre></div></div>
+
+<p>You can get all the code here in this <a href="https://gist.github.com/felipecsl/6289457">Gist</a>.</p>
+</div>
+  <hr class="post-bottom-separator" />
+  <script
+    async
+    data-uid="f5e0a95197"
+    src="https://marvelous-builder-9321.ck.page/f5e0a95197/index.js"
+  ></script>
+
+  <a class="u-url" href="/2013/08/20/animated-gifs-with-android.html" hidden></a>
+</article>
+</div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li>
+    <a href="https://github.com/felipecsl"
+      ><svg class="svg-icon grey">
+        <use
+          xlink:href="/assets/minima-social-icons.svg#github"
+        ></use>
+      </svg>
+      <span class="username">Github</span></a
+    >
+  </li><li>
+    <a
+      href="https://www.linkedin.com/in/felipecsl"
+      ><svg class="svg-icon grey">
+        <use
+          xlink:href="/assets/minima-social-icons.svg#linkedin"
+        ></use>
+      </svg>
+      <span class="username">LinkedIn</span></a
+    >
+  </li><li>
+    <a
+      href="https://twitter.com/felipecsl"
+      ><svg class="svg-icon grey">
+        <use
+          xlink:href="/assets/minima-social-icons.svg#twitter"
+        ></use>
+      </svg>
+      <span class="username">Twitter</span></a
+    >
+  </li><li>
+    <a href="https://medium.com/@felipecsl">
+      <img
+        class="svg-icon grey"
+        src="/images/medium.svg"
+      />
+      <span class="username">Medium</span></a
+    >
+  </li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>The website and blog of Felipe Lima.</p>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>
+          <a href="https://github.com/felipecsl/felipecsl.com" target="_blank">Proudly open source ☕️</a>
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+</footer><script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
+  </body>
+</html>

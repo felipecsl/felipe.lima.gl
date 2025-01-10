@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-HWKXX1QDTX"
+  ></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+    gtag('config', 'G-HWKXX1QDTX');
+  </script>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>
+    Hiding sensitive data in the query string
+  </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="The website and blog of Felipe Lima." />
+  <link
+    rel="canonical"
+    href="http://0.0.0.0:4000/2009/06/17/hiding-sensitive-data-in-the-query-string.html"
+  />
+  <link rel="stylesheet" href="/assets/main.css">
+  <!-- Custom CSS & Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&display=swap&family=Lora" rel="stylesheet">
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+
+
+  <body><header class="site-header">
+  <div class="wrapper"><a class="site-title brand-font" rel="author" href="/">
+      <svg width="50" height="75" viewBox="0 0 280 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M33.6286 206.456L152.117 33.4096L139.5 14.1795L9.57767 206.258L140.5 405.791L270.614 214.005L177.901 72.7057L131.307 142.365L144.374 162.281L179.044 111.043L246.662 214.097L140.797 369.786L33.6286 206.456Z" fill="#444" stroke="#444" stroke-width="15"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M56.864 163.486L69.7852 141.253L140.022 248.298L215.558 138.299L228.176 157.529L138.605 288.063L56.864 163.486Z" fill="#444" stroke="#444" stroke-width="15" stroke-miterlimit="2.61313"/>
+      </svg>
+    </a><nav class="site-nav">
+      <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+      <label for="nav-trigger">
+        <span class="menu-icon">
+          <svg viewBox="0 0 18 15" width="18px" height="15px">
+            <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z" />
+          </svg>
+        </span>
+      </label>
+
+      <div class="trigger"><a class="page-link" href="/about/">About me</a><a class="page-link" href="/archives/">Blog Archives</a><a class="page-link" href="/projects/">Projects</a><a class="page-link" href="/talks/">Talks</a></div>
+    </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper"><article
+  class="post h-entry"
+  itemscope
+  itemtype="http://schema.org/BlogPosting"
+>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">
+      Hiding sensitive data in the query string
+    </h1>
+    <p class="post-meta"><time
+        class="dt-published"
+        datetime="2009-06-17T16:23:00+00:00"
+        itemprop="datePublished"
+      >
+        Jun 17, 2009
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody"><p>Sometimes you need to pass data to a web page and at the same time you need to be able to provide a permalink to that URL to the user. In this case, you don’t have any option other than passing those parameters through the Query String. Otherwise, you could use the Form, Session state, database or any other persistence or data transport mechanism.</p>
+
+<p>I recently had to create a page that needed to receive some sensitive parameters and, at the same time, I needed to be able to provide the URL to the user, so that he/she could view that same page. However, I needed to somehow make the parameters private to the system, so that no one could decypher what data the actual parameters held. The only solution I found was to <a href="http://en.wikipedia.org/wiki/Cryptography">encrypt</a> the Query String values!</p>
+
+<p>For those who are not very familiar with the subject (like me), cryptography can be a really scary thing! Thankfully, Jeff Atwood, founder of the famous <a href="/admin/Pages/www.codinghorror.com">codinghorror.com</a> blog (which of I am a fan also!) wrote a great <a href="http://www.codeproject.com/KB/security/SimpleEncryption.aspx">article</a> at Code Project with some simple background, definitions and a .NET code for those who do not have a strong background on the subject.</p>
+
+<p>I not only found that very useful but also ported the code to C# to fulfill my needs. <a href="http://www.developerfusion.com/tools/convert/vb-to-csharp/">This tool</a> helped me with the rough conversion but I still had to do some conversion by hand, since the code did not compile at first try.</p>
+
+<p>I separated the code logically in different files for better reading. It can be downloaded <a href="http://www.felipel.com/files/Encryption.zip">here</a>.</p>
+
+<p>Below is a simple usage of the Simmetric-key class with the Rijndael (<a href="http://en.wikipedia.org/wiki/Advanced_Encryption_Standard">AES</a>) provider to encrypt the query string variable in one page, send it, and then decrypt in the other side:</p>
+
+<div class="language-c# highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Symmetric</span> <span class="n">symEncryption</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">Symmetric</span><span class="p">(</span><span class="n">Symmetric</span><span class="p">.</span><span class="n">Provider</span><span class="p">.</span><span class="n">Rijndael</span><span class="p">);</span>
+<span class="n">symEncryption</span><span class="p">.</span><span class="n">Key</span><span class="p">.</span><span class="n">Text</span> <span class="p">=</span> <span class="s">"SomeKey"</span><span class="p">;</span>
+<span class="kt">string</span> <span class="n">sSensitiveText</span> <span class="p">=</span> <span class="s">"Some sensitive data"</span><span class="p">;</span>
+<span class="kt">string</span> <span class="n">sEncryptedData</span> <span class="p">=</span> <span class="n">symEncryption</span><span class="p">.</span><span class="nf">Encrypt</span><span class="p">(</span><span class="k">new</span> <span class="nf">Data</span><span class="p">(</span><span class="n">sSensitiveText</span><span class="p">)).</span><span class="n">Base64</span><span class="p">;</span>
+<span class="c1">// fearlessly send sEncryptedData in your query string</span>
+<span class="n">Response</span><span class="p">.</span><span class="nf">Redirect</span><span class="p">(</span>
+    <span class="s">"http://www.someurl.com/somepage.aspx?data="</span> <span class="p">+</span> <span class="n">Server</span><span class="p">.</span><span class="nf">UrlEncode</span><span class="p">(</span><span class="n">sEncryptedData</span><span class="p">));</span>
+<span class="c1">// in the other side, decrypt the text you just received</span>
+<span class="kt">string</span> <span class="n">sDecryptedText</span> <span class="p">=</span> <span class="n">symEncryption</span><span class="p">.</span><span class="nf">Decrypt</span><span class="p">(</span>
+    <span class="k">new</span> <span class="nf">Data</span><span class="p">(</span><span class="n">Request</span><span class="p">.</span><span class="n">QueryString</span><span class="p">[</span><span class="s">"data"</span><span class="p">].</span><span class="nf">FromBase64</span><span class="p">())).</span><span class="n">Text</span><span class="p">;</span>
+<span class="c1">// outputs "Some sensitive data"</span>
+<span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="n">sDecryptedText</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p>Hope this helps someone :)</p>
+</div>
+  <hr class="post-bottom-separator" />
+  <script
+    async
+    data-uid="f5e0a95197"
+    src="https://marvelous-builder-9321.ck.page/f5e0a95197/index.js"
+  ></script>
+
+  <a class="u-url" href="/2009/06/17/hiding-sensitive-data-in-the-query-string.html" hidden></a>
+</article>
+</div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li>
+    <a href="https://github.com/felipecsl"
+      ><svg class="svg-icon grey">
+        <use
+          xlink:href="/assets/minima-social-icons.svg#github"
+        ></use>
+      </svg>
+      <span class="username">Github</span></a
+    >
+  </li><li>
+    <a
+      href="https://www.linkedin.com/in/felipecsl"
+      ><svg class="svg-icon grey">
+        <use
+          xlink:href="/assets/minima-social-icons.svg#linkedin"
+        ></use>
+      </svg>
+      <span class="username">LinkedIn</span></a
+    >
+  </li><li>
+    <a
+      href="https://twitter.com/felipecsl"
+      ><svg class="svg-icon grey">
+        <use
+          xlink:href="/assets/minima-social-icons.svg#twitter"
+        ></use>
+      </svg>
+      <span class="username">Twitter</span></a
+    >
+  </li><li>
+    <a href="https://medium.com/@felipecsl">
+      <img
+        class="svg-icon grey"
+        src="/images/medium.svg"
+      />
+      <span class="username">Medium</span></a
+    >
+  </li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>The website and blog of Felipe Lima.</p>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>
+          <a href="https://github.com/felipecsl/felipecsl.com" target="_blank">Proudly open source ☕️</a>
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+</footer><script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
+  </body>
+</html>

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-HWKXX1QDTX"
+  ></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+    gtag('config', 'G-HWKXX1QDTX');
+  </script>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>
+    Hands on MongoDB with C#
+  </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="The website and blog of Felipe Lima." />
+  <link
+    rel="canonical"
+    href="http://0.0.0.0:4000/2010/03/02/hands-on-mongodb-with-c.html"
+  />
+  <link rel="stylesheet" href="/assets/main.css">
+  <!-- Custom CSS & Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&display=swap&family=Lora" rel="stylesheet">
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+
+
+  <body><header class="site-header">
+  <div class="wrapper"><a class="site-title brand-font" rel="author" href="/">
+      <svg width="50" height="75" viewBox="0 0 280 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M33.6286 206.456L152.117 33.4096L139.5 14.1795L9.57767 206.258L140.5 405.791L270.614 214.005L177.901 72.7057L131.307 142.365L144.374 162.281L179.044 111.043L246.662 214.097L140.797 369.786L33.6286 206.456Z" fill="#444" stroke="#444" stroke-width="15"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M56.864 163.486L69.7852 141.253L140.022 248.298L215.558 138.299L228.176 157.529L138.605 288.063L56.864 163.486Z" fill="#444" stroke="#444" stroke-width="15" stroke-miterlimit="2.61313"/>
+      </svg>
+    </a><nav class="site-nav">
+      <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+      <label for="nav-trigger">
+        <span class="menu-icon">
+          <svg viewBox="0 0 18 15" width="18px" height="15px">
+            <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z" />
+          </svg>
+        </span>
+      </label>
+
+      <div class="trigger"><a class="page-link" href="/about/">About me</a><a class="page-link" href="/archives/">Blog Archives</a><a class="page-link" href="/projects/">Projects</a><a class="page-link" href="/talks/">Talks</a></div>
+    </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper"><article
+  class="post h-entry"
+  itemscope
+  itemtype="http://schema.org/BlogPosting"
+>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">
+      Hands on MongoDB with C#
+    </h1>
+    <p class="post-meta"><time
+        class="dt-published"
+        datetime="2010-03-02T06:36:00+00:00"
+        itemprop="datePublished"
+      >
+        Mar 2, 2010
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody"><p>During the last couple days I’ve been experimenting with <a href="/admin/Pages/www.mongodb.com">MongoDB</a> and its <a href="http://github.com/samus/mongodb-csharp">C# driver</a>, cleverly written by Sam Corder. I’m investigating it as a replacement for a SQL Server database I am using in a web application that is higly community driven. This specific characteristic is the one that makes the <a href="http://en.wikipedia.org/wiki/NoSQL">NoSQL</a> movement rise atop regular RDBMS systems like SQL Server or MySQL, since it is hard to mantain relational integrity in these scenarios. Other key features of MongoDB are focus on performance and scalability.</p>
+
+<p><a href="http://odetocode.com/Blogs/scott/archive/2009/10/13/experimenting-with-mongodb-from-c.aspx">K. Scott Allen</a> already wrote a quick intro on using the C# driver, so I used it as a tutorial for my first steps. Here are some thoughts I’d like to share on this topic:</p>
+
+<ul>
+  <li>I don’t like being held by the verbosity of instantiating Document objects every time I want to manipulate the database, so I’ve written method overloads for the main operations, like Insert, Update, Find and Delete that receive a plain object and only then convert them to Document. This allows us to leverage anonymous objects in C# and makes the code cleaner:</li>
+</ul>
+
+<div class="language-c# highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Mongo</span> <span class="n">mongo</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">Mongo</span><span class="p">();</span>
+<span class="n">mongo</span><span class="p">.</span><span class="nf">Connect</span><span class="p">();</span>
+<span class="n">Database</span> <span class="n">db</span> <span class="p">=</span> <span class="n">mongo</span><span class="p">[</span><span class="err">“</span><span class="n">testdb</span><span class="err">”</span><span class="p">];</span>
+<span class="kt">var</span> <span class="n">col</span> <span class="p">=</span> <span class="n">db</span><span class="p">[</span><span class="err">“</span><span class="n">users</span><span class="err">”</span><span class="p">];</span>
+<span class="k">foreach</span><span class="p">(</span><span class="n">Document</span> <span class="n">d</span> <span class="k">in</span> <span class="n">col</span><span class="p">.</span><span class="nf">Find</span><span class="p">(</span><span class="k">new</span> <span class="p">{</span> <span class="n">name</span> <span class="p">=</span> <span class="err">“</span><span class="n">John</span> <span class="n">Doe</span><span class="err">”</span><span class="p">}).</span><span class="n">Documents</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="kt">int</span> <span class="n">johnId</span> <span class="p">=</span> <span class="n">d</span><span class="p">[</span><span class="err">”</span><span class="n">_id</span><span class="err">”</span><span class="p">];</span>
+  <span class="kt">int</span> <span class="n">johnName</span> <span class="p">=</span> <span class="n">d</span><span class="p">[</span><span class="err">“</span><span class="n">name</span><span class="err">”</span><span class="p">];</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>The code with this implementation is available on my fork of the driver at <a href="http://github.com/felipecsl/mongodb-csharp">github</a> an will hopefully be merged with the master soon.</p>
+
+<p>MongoDB allows storage of files in the database, as well, through the <a href="http://www.mongodb.org/display/DOCS/GridFS">GridFS specification</a>. The C# api is already implemented and functional. Follow an example for writing a file to the database:</p>
+
+<div class="language-c# highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="k">void</span> <span class="nf">Main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="n">Mongo</span> <span class="n">mongo</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">Mongo</span><span class="p">();</span>
+    <span class="n">mongo</span><span class="p">.</span><span class="nf">Connect</span><span class="p">();</span>
+    <span class="n">Database</span> <span class="n">db</span> <span class="p">=</span> <span class="n">mongo</span><span class="p">[</span><span class="err">“</span><span class="n">test</span><span class="err">”</span><span class="p">];</span>
+    <span class="kt">var</span> <span class="n">collection</span> <span class="p">=</span> <span class="n">db</span><span class="p">[</span><span class="err">“</span><span class="n">testcollection</span><span class="err">”</span><span class="p">];</span>
+    <span class="n">GridFile</span> <span class="n">file</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">GridFile</span><span class="p">(</span><span class="n">db</span><span class="p">);</span>
+    <span class="k">using</span><span class="p">(</span><span class="n">GridFileStream</span> <span class="n">fs</span> <span class="p">=</span> <span class="n">file</span><span class="p">.</span><span class="nf">Create</span><span class="p">(</span><span class="err">“</span><span class="n">mycv</span><span class="err">”</span><span class="p">))</span> <span class="c1">// define the file name</span>
+    <span class="p">{</span>
+        <span class="nf">ReadWriteStream</span><span class="p">(</span><span class="n">File</span><span class="p">.</span><span class="nf">OpenRead</span><span class="p">(</span><span class="err">@”</span><span class="n">C</span><span class="p">:</span><span class="err">\</span><span class="n">Data</span><span class="err">\</span><span class="n">felipelima_en</span><span class="p">.</span><span class="n">doc</span><span class="err">”</span><span class="p">),</span> <span class="n">fs</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">ReadWriteStream</span><span class="p">(</span>
+    <span class="n">Stream</span> <span class="n">readStream</span><span class="p">,</span>
+    <span class="n">Stream</span> <span class="n">writeStream</span><span class="p">)</span>
+
+<span class="p">{</span>
+    <span class="n">Byte</span><span class="p">[]</span> <span class="n">buffer</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Byte</span><span class="p">[</span><span class="n">Int16</span><span class="p">.</span><span class="n">MaxValue</span><span class="p">];</span>
+    <span class="kt">int</span> <span class="n">bytesRead</span> <span class="p">=</span> <span class="n">readStream</span><span class="p">.</span><span class="nf">Read</span><span class="p">(</span><span class="n">buffer</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="n">Int16</span><span class="p">.</span><span class="n">MaxValue</span><span class="p">);</span>
+    <span class="c1">// write the required bytes</span>
+
+    <span class="k">while</span> <span class="p">(</span><span class="n">bytesRead</span> <span class="p">&gt;</span> <span class="m">0</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">writeStream</span><span class="p">.</span><span class="nf">Write</span><span class="p">(</span><span class="n">buffer</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="n">bytesRead</span><span class="p">);</span>
+
+        <span class="n">bytesRead</span> <span class="p">=</span> <span class="n">readStream</span><span class="p">.</span><span class="nf">Read</span><span class="p">(</span><span class="n">buffer</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="n">Int16</span><span class="p">.</span><span class="n">MaxValue</span><span class="p">);</span>
+
+    <span class="p">}</span>
+    <span class="n">readStream</span><span class="p">.</span><span class="nf">Close</span><span class="p">();</span>
+    <span class="n">writeStream</span><span class="p">.</span><span class="nf">Close</span><span class="p">();</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Database files work just like plain Documents and will be assigned an Id upon creation. Therefore, they can be later queried just like a regular document.</p>
+
+<p>This was just a quick glance over MongoDB and C# integration. I’m planning on using it on a large project and will post here my findings. More to come.</p>
+</div>
+  <hr class="post-bottom-separator" />
+  <script
+    async
+    data-uid="f5e0a95197"
+    src="https://marvelous-builder-9321.ck.page/f5e0a95197/index.js"
+  ></script>
+
+  <a class="u-url" href="/2010/03/02/hands-on-mongodb-with-c.html" hidden></a>
+</article>
+</div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li>
+    <a href="https://github.com/felipecsl"
+      ><svg class="svg-icon grey">
+        <use
+          xlink:href="/assets/minima-social-icons.svg#github"
+        ></use>
+      </svg>
+      <span class="username">Github</span></a
+    >
+  </li><li>
+    <a
+      href="https://www.linkedin.com/in/felipecsl"
+      ><svg class="svg-icon grey">
+        <use
+          xlink:href="/assets/minima-social-icons.svg#linkedin"
+        ></use>
+      </svg>
+      <span class="username">LinkedIn</span></a
+    >
+  </li><li>
+    <a
+      href="https://twitter.com/felipecsl"
+      ><svg class="svg-icon grey">
+        <use
+          xlink:href="/assets/minima-social-icons.svg#twitter"
+        ></use>
+      </svg>
+      <span class="username">Twitter</span></a
+    >
+  </li><li>
+    <a href="https://medium.com/@felipecsl">
+      <img
+        class="svg-icon grey"
+        src="/images/medium.svg"
+      />
+      <span class="username">Medium</span></a
+    >
+  </li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>The website and blog of Felipe Lima.</p>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>
+          <a href="https://github.com/felipecsl/felipecsl.com" target="_blank">Proudly open source ☕️</a>
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+</footer><script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
+  </body>
+</html>

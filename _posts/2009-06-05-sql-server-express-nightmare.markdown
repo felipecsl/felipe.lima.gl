@@ -39,11 +39,8 @@ In some machines, I've seen the user IIS_IUSRS instead of NETWORK SERVICE, so yo
 
 If you are using SQL Server Management Studio Express, you have to Detach the database (do not forget to check the checkbox "Drop Connections" in the subsequent screen):
 
-
-
-
 ![](/images/2009/6/Sem+t%c3%adtulo2.png)
 
-Go to your webpage and try reloading it.  It should work now. In case it doesn't work, try closing your Solution inside VS or close the whole VS window. I've seen cases where VS keeps the database locked even after you closed the connection in the Server Explorer. Unfortunately, the error above isn't related to an open connection and this is why it sometimes it gets really hard to diagnose the issue.
+Go to your webpage and try reloading it. It should work now. In case it doesn't work, try closing your Solution inside VS or close the whole VS window. I've seen cases where VS keeps the database locked even after you closed the connection in the Server Explorer. Unfortunately, the error above isn't related to an open connection and this is why it sometimes it gets really hard to diagnose the issue.
 
 As I said before, only one connection may be open with the SQL Express database file at a time, so always make sure there is no other program with it open. This does not mean that it does not allow concurrent users using the database, but Visual Studio and Management Studio manage to open it in such a way that locks the file entirely. The reason is unknown to me.

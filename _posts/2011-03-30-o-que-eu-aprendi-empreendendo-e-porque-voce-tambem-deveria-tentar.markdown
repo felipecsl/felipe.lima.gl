@@ -6,7 +6,7 @@ slug: o-que-eu-aprendi-empreendendo-e-porque-voce-tambem-deveria-tentar
 title: O que eu aprendi empreendendo e porque você também deveria tentar
 wordpress_id: 74
 tags:
-- empreendedorismo
+  - empreendedorismo
 ---
 
 Me motivei a escrever um pouco sobre empreendedorismo pois tenho visto muitas pessoas que no fundo têm vontade de inovar, empreender, mudar, mas geralmente sentem medo de dar uma virada brusca em suas vidas, sair da zona de conforto e arriscar. Pois eu vou relatar um pouco sobre o que eu aprendi com isso tudo durante o último ano, em que eu me envolvi bastante com este tópico.

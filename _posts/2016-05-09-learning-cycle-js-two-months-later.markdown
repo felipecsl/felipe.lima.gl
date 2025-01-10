@@ -6,4 +6,3 @@ comments: true
 external_url: https://medium.com/@felipecsl/learning-cycle-js-two-months-later-e02cd683e0aa
 external_site: medium
 ---
-

@@ -8,22 +8,22 @@ categories:
 
 ## Summary
 
-This year’s annual review, AKA retrospective, came in a bit later, but nevertheless, better later than never. 
-This time, I decided to follow Farnam Street’s awesome [Annual Review](https://fs.blog/annual-review/) 
-format to guide my thinking and I found it to be an awesome framework for conducting this kind of reflection. 
-Also, looking back to [previews reviews](https://felipecsl.com/2021/12/05/2021-retrospective.html) helped 
+This year’s annual review, AKA retrospective, came in a bit later, but nevertheless, better later than never.
+This time, I decided to follow Farnam Street’s awesome [Annual Review](https://fs.blog/annual-review/)
+format to guide my thinking and I found it to be an awesome framework for conducting this kind of reflection.
+Also, looking back to [previews reviews](https://felipecsl.com/2021/12/05/2021-retrospective.html) helped
 me see how things evolved in my life.
 
-2022 was marked by several meaningful changes, including quitting my job, taking another break from work, 
+2022 was marked by several meaningful changes, including quitting my job, taking another break from work,
 getting married and having a baby! It wasn't all roses though.
 
-While (f)unemployed, I struggled with lack of focus and self-doubt. Knowing that the family is growing, 
-I felt an increased (self imposed) pressure to be employed and have a steady source of income, especially during the 
+While (f)unemployed, I struggled with lack of focus and self-doubt. Knowing that the family is growing,
+I felt an increased (self imposed) pressure to be employed and have a steady source of income, especially during the
 unprecedented negative financial and economic conditions that permeated the past 12 months globally.
 
 ## Highlights ☀️
 
-- I got married in July *and* am becoming a father! 👶
+- I got married in July _and_ am becoming a father! 👶
 - Had an amazing experience traveling to Doha in Qatar for the World Cup! ⚽
 - Spent one month traveling around Portugal with my wife!
 - [Quit my job at QuickNode](https://felipecsl.com/2022/08/27/a-new-beginning.html) and have been taking some time off from work since August
@@ -47,10 +47,10 @@ unprecedented negative financial and economic conditions that permeated the past
 
 ## Favorite quotes 💭
 
-- *"I'm not upset that you lied to me, I'm upset that from now on I can't believe you." – Friedrich Nietzsche*
-- *“So much advantage in life comes from being willing to look like an idiot over the short term.”*
-- *"Instead of ‘why the addiction’, ask ‘why the pain?’”* - Dr. Gabor Mate
-- *“When we are no longer able to change a situation, we are challenged to change ourselves.” — Viktor Frankl*
+- _"I'm not upset that you lied to me, I'm upset that from now on I can't believe you." – Friedrich Nietzsche_
+- _“So much advantage in life comes from being willing to look like an idiot over the short term.”_
+- _"Instead of ‘why the addiction’, ask ‘why the pain?’”_ - Dr. Gabor Mate
+- _“When we are no longer able to change a situation, we are challenged to change ourselves.” — Viktor Frankl_
 
 ## Questions to ponder 🤔
 
@@ -64,10 +64,10 @@ unprecedented negative financial and economic conditions that permeated the past
 - [Debt Spiral](https://threadreaderapp.com/thread/1562078782453792768.html) - James Lavish
 - [68 bits of unsolicited advice](https://www.lambrospetrou.com/articles/bits-of-unsolicited-advice-kevin-kelly/) - Kevin Kelly
 
-I’m optimistic about 2023, and I do think it will be a better year now that Covid is behind us and the 
-worst of the bear market is also over. With US interest rate increases tapering off soon, risk assets 
-will start growing again, including crypto. With more liquidity flowing into the system, companies won’t 
-have go through more layoffs and the entire industry will thrive again. At least until the end of the 
+I’m optimistic about 2023, and I do think it will be a better year now that Covid is behind us and the
+worst of the bear market is also over. With US interest rate increases tapering off soon, risk assets
+will start growing again, including crypto. With more liquidity flowing into the system, companies won’t
+have go through more layoffs and the entire industry will thrive again. At least until the end of the
 next cycle, when inflation comes back and we start all over again until everything blows up to space 🙂
 
 Alright that was it for my annual review. I hope you enjoyed reading and that you have a great 2023!

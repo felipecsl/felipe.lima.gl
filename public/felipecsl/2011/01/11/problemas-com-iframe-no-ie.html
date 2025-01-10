@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-HWKXX1QDTX"
+  ></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+    gtag('config', 'G-HWKXX1QDTX');
+  </script>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>
+    Problemas com IFrame no IE?
+  </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="The website and blog of Felipe Lima." />
+  <link
+    rel="canonical"
+    href="http://0.0.0.0:4000/2011/01/11/problemas-com-iframe-no-ie.html"
+  />
+  <link rel="stylesheet" href="/assets/main.css">
+  <!-- Custom CSS & Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&display=swap&family=Lora" rel="stylesheet">
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+
+
+  <body><header class="site-header">
+  <div class="wrapper"><a class="site-title brand-font" rel="author" href="/">
+      <svg width="50" height="75" viewBox="0 0 280 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M33.6286 206.456L152.117 33.4096L139.5 14.1795L9.57767 206.258L140.5 405.791L270.614 214.005L177.901 72.7057L131.307 142.365L144.374 162.281L179.044 111.043L246.662 214.097L140.797 369.786L33.6286 206.456Z" fill="#444" stroke="#444" stroke-width="15"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M56.864 163.486L69.7852 141.253L140.022 248.298L215.558 138.299L228.176 157.529L138.605 288.063L56.864 163.486Z" fill="#444" stroke="#444" stroke-width="15" stroke-miterlimit="2.61313"/>
+      </svg>
+    </a><nav class="site-nav">
+      <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+      <label for="nav-trigger">
+        <span class="menu-icon">
+          <svg viewBox="0 0 18 15" width="18px" height="15px">
+            <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z" />
+          </svg>
+        </span>
+      </label>
+
+      <div class="trigger"><a class="page-link" href="/about/">About me</a><a class="page-link" href="/archives/">Blog Archives</a><a class="page-link" href="/projects/">Projects</a><a class="page-link" href="/talks/">Talks</a></div>
+    </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper"><article
+  class="post h-entry"
+  itemscope
+  itemtype="http://schema.org/BlogPosting"
+>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">
+      Problemas com IFrame no IE?
+    </h1>
+    <p class="post-meta"><time
+        class="dt-published"
+        datetime="2011-01-11T15:03:33+00:00"
+        itemprop="datePublished"
+      >
+        Jan 11, 2011
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody"><p>Pois é. Você não é o único. Apesar de funcionar às mil maravilhas em outros navegadores, o IE parece considerar o IFrame uma ameaça de segurança e se recusa a aceitar cookies de sites de terceiros dentro de um IFrame. Legal né? Isto dificulta qualquer tentativa de colocar um formulário de login dentro de um IFrame, por exemplo ou, ainda mais comum, colocar a janela de pagamento de um gateway (no meu caso, <a href="https://pagseguro.uol.com.br/">PagSeguro</a>) dentro de um IFrame funcionando como uma sobretela. Isto funciona perfeitamente, mas não no IE.</p>
+
+<p>A questão toda é que o IE não irá aceitar nenhum cookie do PagSeguro, pois ele está fora do domínio principal do site que está sendo acessado no momento (o site onde você está tentando comprar algum produto, por exemplo). A maneira para contornarmos esse problema, seria implementando um mecanismo chamado <a href="http://www.w3.org/P3P/">P3P</a>.O que este negócio aí faz, é criar um mecanismo de expor para o browser qual é a política de privacidade do site de maneira programática (através de um cabeçalho no response).</p>
+
+<p>Exemplo:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>response["P3P"] = 'CP="IDC DSP COR ADM DEVi TAIi PSA PSD IVAi IVDi CONi HIS OUR IND CNT"'
+</code></pre></div></div>
+
+<p>Cada uma destas siglas de 3 ou 4 letras acima tem um significado, como por exemplo, expor como o site utiliza os dados do usuário. Esta propriedade deve ser incluida no cabeçalho de todas as páginas que setam um cookie no browser. Mais informações <a href="http://stackoverflow.com/questions/389456/cookie-blocked-not-saved-in-iframe-in-internet-explorer">aqui</a> e <a href="http://adamyoung.net/IE-Blocking-iFrame-Cookies">aqui</a>.</p>
+
+<p>Isto é o que acontece quando os seus cookies forem bloqueados :)</p>
+
+<p><a href="/images/2011/01/p3p.png"><img src="/images/2011/01/p3p-300x211.png" alt="" /></a></p>
+
+<p>No caso do PagSeguro, o que acabava acontecendo é um erro dizendo “Sua sessão expirou.”.</p>
+
+<p>Na minha opinião, é responsabilidade do PagSeguro implementar P3P em suas páginas para possibilitar que os desenvolvedores possam utilizar este recurso, já que, como não temos controle sobre o PagSeguro, não temos como implementar o cabeçalho customizado do P3P nas responses.</p>
+
+<p>Com isso, acabamos tendo que mudar a interface para não utilizarmos mais o IFrame, pois não encontramos solução para o problema!</p>
+
+<p>Bom, fica aí mais um motivo pra você que já odiava o IE, agora tem um motivo a mais :D</p>
+</div>
+  <hr class="post-bottom-separator" />
+  <script
+    async
+    data-uid="f5e0a95197"
+    src="https://marvelous-builder-9321.ck.page/f5e0a95197/index.js"
+  ></script>
+
+  <a class="u-url" href="/2011/01/11/problemas-com-iframe-no-ie.html" hidden></a>
+</article>
+</div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li>
+    <a href="https://github.com/felipecsl"
+      ><svg class="svg-icon grey">
+        <use
+          xlink:href="/assets/minima-social-icons.svg#github"
+        ></use>
+      </svg>
+      <span class="username">Github</span></a
+    >
+  </li><li>
+    <a
+      href="https://www.linkedin.com/in/felipecsl"
+      ><svg class="svg-icon grey">
+        <use
+          xlink:href="/assets/minima-social-icons.svg#linkedin"
+        ></use>
+      </svg>
+      <span class="username">LinkedIn</span></a
+    >
+  </li><li>
+    <a
+      href="https://twitter.com/felipecsl"
+      ><svg class="svg-icon grey">
+        <use
+          xlink:href="/assets/minima-social-icons.svg#twitter"
+        ></use>
+      </svg>
+      <span class="username">Twitter</span></a
+    >
+  </li><li>
+    <a href="https://medium.com/@felipecsl">
+      <img
+        class="svg-icon grey"
+        src="/images/medium.svg"
+      />
+      <span class="username">Medium</span></a
+    >
+  </li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>The website and blog of Felipe Lima.</p>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>
+          <a href="https://github.com/felipecsl/felipecsl.com" target="_blank">Proudly open source ☕️</a>
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+</footer><script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
+  </body>
+</html>

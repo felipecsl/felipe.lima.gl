@@ -22,7 +22,7 @@ they shared with us prior to the retreat. Overall I was very impressed with the
 quality of the organization, every minor detail has been thoughtfully planned
 and I had an amazing time. The facilitators were absolutely fantastic, very
 knowledgeable, kind and helpful people. I'm deeply grateful for the work they
-did and how helpful they were during the entire retreat. 
+did and how helpful they were during the entire retreat.
 
 We met in a Smart Shop in Amsterdam where we bought the truffles then walked to
 the Central Station where we all took a shared bus to the venue, which was ~2
@@ -31,7 +31,7 @@ the middle of nowhere in the Netherlands, just nature all around. It seemed
 like a small city in a quiet rural area.
 
 ![the view from my room](/images/2019/10/chairs.jpg)
-*This was the view from my bedroom*
+_This was the view from my bedroom_
 
 The group was composed of ~ 20 people, including 4 facilitators. We were
 divided in rooms of 3-4 people each (a couple of people paid extra to stay in a
@@ -42,7 +42,7 @@ younger end of the age range, the oldest ones were probably in their
 sixties/seventies (~3 people). Gender wise, it was evenly distributed. Everyone
 was super friendly and open minded (as expected). There was a lot of positivity
 and good vibes all around. It was easy to approach people and chat about
-anything. 
+anything.
 
 On the first day, we arrived around 6pm and had some group activities until
 ~10pm. The activities were mostly around getting us into a relaxed state of
@@ -58,7 +58,7 @@ cooked right there by one of the facilitators.
 ## The trip
 
 ![high hawaiians mushrooms](/images/2019/10/high-haweaiians.jpg)
-*The magic mushrooms!*
+_The magic mushrooms!_
 
 We had a pretty high dose of mushrooms (as explained in the PDF linked above)
 which was delivered in two parts, the second dose was completely optional, but
@@ -98,13 +98,13 @@ I’ve read in Michael Pollan’s book [How to Change Your
 Mind](https://www.amazon.com/Change-Your-Mind-Consciousness-Transcendence/dp/1594204225)
 (strongly recommended read if you’re interested in psychedelics btw) is:
 
-> *"You have to imagine a caveman transported into the middle of Manhattan. He
-sees buses, cell phones, skyscrapers, airplanes. Then zap him back to his cave.
-What does he say about the experience? ‘It was big, it was impressive, it was
-loud.’ He doesn’t have the vocabulary for ‘skyscraper,’ ‘elevator,’ ‘cell
-phone.’ Maybe he has an intuitive sense there was some sort of significance or
-order to the scene. But there are words we need that don’t yet exist. We’ve got
-five crayons when we need fifty thousand different shades."*
+> _"You have to imagine a caveman transported into the middle of Manhattan. He
+> sees buses, cell phones, skyscrapers, airplanes. Then zap him back to his cave.
+> What does he say about the experience? ‘It was big, it was impressive, it was
+> loud.’ He doesn’t have the vocabulary for ‘skyscraper,’ ‘elevator,’ ‘cell
+> phone.’ Maybe he has an intuitive sense there was some sort of significance or
+> order to the scene. But there are words we need that don’t yet exist. We’ve got
+> five crayons when we need fifty thousand different shades."_
 
 It’s really something that you have to experience in order to understand but
 it’s not an exaggeration to say this was life changing for me. Being able to
@@ -148,5 +148,3 @@ to learn more, I’d recommend reading Michael Pollan’s book and/or doing onli
 research. There’s plenty going on lately on this field and it’s getting more
 traction around the world. This is a powerful tool that lots of people can
 benefit from!
-
-

@@ -6,6 +6,7 @@ comments: true
 published: false
 categories:
 ---
+
 # Introdução
 
 Aqui no Brasil tem vários sites de compra e venda de cacarecos online. Sempre usei o [Mercado Livre](http://mercadolivre.com.br) desde a época da faculdade para comprar e vender principalmente coisas usadas. Entretanto, com o tempo ele foi ficando mais caro para anunciar e outros concorrentes apareceram.
@@ -24,15 +25,15 @@ Por ser programador, desde o momento que entrei no site, comecei a reparar nos d
 
 [![](/images/2014/04/bnegocio_editar.png)](/images/2014/04/bnegocio_editar.png)
 
-Notei que ao clicar no link acontecia um redirect estranho que me levava para uma página com a URL mais ou menos assim: ``http://www2.bomnegocio.com/ai/form/0?cmd=edit&ticket=2cc84e2e9f0d41387d79794b12ceba07990cf0c2``. Entretanto, o link de editar anúncio tinha o href bem diferente. Esse era o formato: ``https://www3.bomnegocio.com/password_page/load_page/0?list_id=437898346&cmd=edit&type=AD_EDIT&data=1343242``. Isso me deixou com uma pulga atrás da orelha.
+Notei que ao clicar no link acontecia um redirect estranho que me levava para uma página com a URL mais ou menos assim: `http://www2.bomnegocio.com/ai/form/0?cmd=edit&ticket=2cc84e2e9f0d41387d79794b12ceba07990cf0c2`. Entretanto, o link de editar anúncio tinha o href bem diferente. Esse era o formato: `https://www3.bomnegocio.com/password_page/load_page/0?list_id=437898346&cmd=edit&type=AD_EDIT&data=1343242`. Isso me deixou com uma pulga atrás da orelha.
 
-Ao olhar para essa URL, a primeira coisa que me veio à cabeça foi de alterar o número do parâmetro ``list_id`` para o ID de outro produto do site. Não foi difícil obter o ID de outro produto. Olhando para a URL de um anúncio (``http://rs.bomnegocio.com/regioes-de-porto-alegre-torres-e-santa-cruz-do-sul/computadores-e-acessorios/monitor-17-proview-preto-tela-plana-31904501``), fica claro que o ID se trata do último segmento do path, mais precisamente, neste caso, ``31904501``. Também era possível encontrar este ID na própria descrição do produto, pois ele vem na página mesmo, entitulado **Código do anúncio**:
+Ao olhar para essa URL, a primeira coisa que me veio à cabeça foi de alterar o número do parâmetro `list_id` para o ID de outro produto do site. Não foi difícil obter o ID de outro produto. Olhando para a URL de um anúncio (`http://rs.bomnegocio.com/regioes-de-porto-alegre-torres-e-santa-cruz-do-sul/computadores-e-acessorios/monitor-17-proview-preto-tela-plana-31904501`), fica claro que o ID se trata do último segmento do path, mais precisamente, neste caso, `31904501`. Também era possível encontrar este ID na própria descrição do produto, pois ele vem na página mesmo, entitulado **Código do anúncio**:
 
 [![](/images/2014/04/bnegocio_id_anuncio.png)](/images/2014/04/bnegocio_id_anuncio.png)
 
-Em seguida, o que fiz foi apenas testar este ID novo naquela URL de editar anúncio, alterando o parâmetro ``list_id``. Com a alteração, ficaria mais ou menos assim: ``https://www3.bomnegocio.com/password_page/load_page/0?list_id=31904501&cmd=edit&type=AD_EDIT&data=1343242``.
+Em seguida, o que fiz foi apenas testar este ID novo naquela URL de editar anúncio, alterando o parâmetro `list_id`. Com a alteração, ficaria mais ou menos assim: `https://www3.bomnegocio.com/password_page/load_page/0?list_id=31904501&cmd=edit&type=AD_EDIT&data=1343242`.
 
-Ao fazer esta simples alteração, algo mágico aconteceu. O Bom Negócio simplesmente me redirecionou para a página de editar anúncio, com todas as informações preenchidas do anúncio referente ao ID ``31904501`` (que pertencia a outro usuário), além dos dados pessoais do usuário que tinha originalmente postado aquele anúncio (Nome completo, e-mail, telefone, etc).
+Ao fazer esta simples alteração, algo mágico aconteceu. O Bom Negócio simplesmente me redirecionou para a página de editar anúncio, com todas as informações preenchidas do anúncio referente ao ID `31904501` (que pertencia a outro usuário), além dos dados pessoais do usuário que tinha originalmente postado aquele anúncio (Nome completo, e-mail, telefone, etc).
 
 [![](/images/2014/04/bnegocio_anuncio.png)](/images/2014/04/bnegocio_anuncio.png)
 
@@ -44,11 +45,11 @@ Esse foi um momento bizarro! Basicamente consegui me autenticar no site como out
 
 [![](/images/2014/04/bnegocio_anuncios.png)](/images/2014/04/bnegocio_anuncios.png)
 
-Decidi ir mais adiante. Minha teoria era de que, manipulando a URL através da alteração do parâmetro ``list_id``, eu poderia me logar como qualquer usuário, bastando para isso ter o ID de um dos anúncios dele. Fui tentando com IDs de outros anúncios, mas rapidamente acabei caindo na tela de login. Fui deslogado automaticamente do sistema. Algo não estava certo.
+Decidi ir mais adiante. Minha teoria era de que, manipulando a URL através da alteração do parâmetro `list_id`, eu poderia me logar como qualquer usuário, bastando para isso ter o ID de um dos anúncios dele. Fui tentando com IDs de outros anúncios, mas rapidamente acabei caindo na tela de login. Fui deslogado automaticamente do sistema. Algo não estava certo.
 
-Voltando a analisar a URL de editar anúncio, reparei que ela possuia outro parâmetro um pouco mais obscuro: ``data``. Se tratava de outro número aparentemente sem relação com o ``list_id``, esse dava pouca indicação de onde vinha. Eu estava desconfiado pois em momento algum o ID do usuário entrava na jogada, então depois de alguns minutos comecei a suspeitar que o parâmetro ``data`` se tratava na verdade de um ID de usuário. Não estava certo ainda de qual usuário seria, teria que ser ou do dono do anúncio, ou do usuário logado atualmente. Depois de fazer mais alguns testes, ficou claro que ``data`` se tratava do ID do usuário que estava logado no momento.
+Voltando a analisar a URL de editar anúncio, reparei que ela possuia outro parâmetro um pouco mais obscuro: `data`. Se tratava de outro número aparentemente sem relação com o `list_id`, esse dava pouca indicação de onde vinha. Eu estava desconfiado pois em momento algum o ID do usuário entrava na jogada, então depois de alguns minutos comecei a suspeitar que o parâmetro `data` se tratava na verdade de um ID de usuário. Não estava certo ainda de qual usuário seria, teria que ser ou do dono do anúncio, ou do usuário logado atualmente. Depois de fazer mais alguns testes, ficou claro que `data` se tratava do ID do usuário que estava logado no momento.
 
-Acontece que, ao tomar posse da conta de outro usuário, automaticamente meu ID de usuário alterava, pois eu estava na verdade me passando por outra pessoa, portanto deveria enviar um parâmetro ``data`` diferente.
+Acontece que, ao tomar posse da conta de outro usuário, automaticamente meu ID de usuário alterava, pois eu estava na verdade me passando por outra pessoa, portanto deveria enviar um parâmetro `data` diferente.
 
 Não foi difícil obter o ID de usuário. Este estava um pouco mais escondido, mas facilmente encontrado no código fonte da página:
 
@@ -56,8 +57,8 @@ Não foi difícil obter o ID de usuário. Este estava um pouco mais escondido, m
 
 Com esses ingredientes, eu basicamente tinha uma receita para me autenticar no bomnegocio.com como qualquer usuário do site, bastando atender a apenas dois simples pré-requisitos:
 
-* Estar logado inicialmente em uma conta qualquer. Para isto, bastava criar um usuário fictício;
-* Ter o link para qualquer anúncio do usuário que desejo personificar. Facilmente encontrado nas páginas de listagem de anúncios do site.
+- Estar logado inicialmente em uma conta qualquer. Para isto, bastava criar um usuário fictício;
+- Ter o link para qualquer anúncio do usuário que desejo personificar. Facilmente encontrado nas páginas de listagem de anúncios do site.
 
 # Ação
 
@@ -71,8 +72,8 @@ Em um segundo momento, resolvi mover os dados para um simples banco de dados MyS
 
 Segue abaixo o código completo do exploit que varre o bomnegocio.com e extrai informações de todos os usuários que encontrar :)
 
-
 ```ruby
+
 ```
 
 Vale lembrar que poderiamos armazenar muitas outras informações dos usuários, por exemplo, CPF/CNPJ, CEP, Endereço, Estado, Municipio, etc. Todas estas informações estão disponíveis no momento em que nos apoderamos da sessão do usuário. Esta é apenas uma prova de conceito para ilustrar a falha de seguranca, entretanto, as dimensões deste problema são muito maiores do que apenas uma lista de nomes, email e telefone.

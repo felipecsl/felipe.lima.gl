@@ -23,6 +23,14 @@ layout: home
 <h1>Recent Articles</h1>
 <ul class="post-list">
   <li>
+    <span class="post-meta">Feb 2nd, 2025</span>
+    <h3>
+      <a class="post-link" href="/2025/02/02/borderline-detours.html">
+        Borderline Detours
+      </a>
+    </h3>
+  </li>
+  <li>
     <span class="post-meta">Aug 14, 2024</span>
     <h3>
       <a class="post-link" href="/2024/08/14/reframing-expectations.html">
@@ -51,14 +59,6 @@ layout: home
     <h3>
       <a class="post-link" href="/2023/05/13/moving-to-lima-gl.html">
         Domain names and branding
-      </a>
-    </h3>
-  </li>
-  <li>
-    <span class="post-meta">Jan 13, 2023</span>
-    <h3>
-      <a class="post-link" href="/2023/01/13/2022-annual-review.html">
-        2022 Annual Review
       </a>
     </h3>
   </li>

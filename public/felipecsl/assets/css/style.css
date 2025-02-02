@@ -20,8 +20,6 @@ a:hover, a:focus { text-decoration: none; color: #101010; }
 
 .site-header { padding-top: 10px; margin-bottom: 0; }
 
-.site-nav .page-link:not(:last-child) { margin-right: 40px; }
-
 .footer-col-3 { width: -webkit-calc(50% - (30px / 2)); width: calc(50% - 30px / 2); }
 
 .site-header .navbar-brand { font-weight: 700; }
@@ -164,3 +162,4 @@ article.post, .archive, .projects { margin-top: 60px; }
   pre, code { border: 1px solid #333; }
   .hero { border: 1px solid #111; box-shadow: 0px 0px 5px #111; }
   .site-footer { border-top: 1px solid #0a0a0a; padding: 30px 0; } }
+@media screen and (prefers-color-scheme: dark) and (max-width: 600px) { .site-nav { background-color: #111; border: 1px solid #0c0c0c; } }

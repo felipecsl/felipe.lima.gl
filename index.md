@@ -23,6 +23,14 @@ layout: home
 <h1>Recent Articles</h1>
 <ul class="post-list">
   <li>
+    <span class="post-meta">Oct 31, 2025</span>
+    <h3>
+      <a class="post-link" href="/2025/10/31/homelabbing.html">
+        Breaking up with big tech: A year into homelabbing
+      </a>
+    </h3>
+  </li>
+  <li>
     <span class="post-meta">Feb 2nd, 2025</span>
     <h3>
       <a class="post-link" href="/2025/02/02/borderline-detours.html">
@@ -54,13 +62,6 @@ layout: home
       </a>
     </h3>
   </li>
-  <li>
-    <span class="post-meta">May 13, 2023</span>
-    <h3>
-      <a class="post-link" href="/2023/05/13/moving-to-lima-gl.html">
-        Domain names and branding
-      </a>
-    </h3>
-  </li>
+  
 </ul>
 [Older articles &rsaquo;]({% link archive.md %})

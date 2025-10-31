@@ -1,4 +1,97 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2025-02-02T23:01:29+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">Felipe Lima</title><subtitle>The website and blog of Felipe Lima.</subtitle><entry><title type="html">Borderline Detours</title><link href="http://0.0.0.0:4000/2025/02/02/borderline-detours.html" rel="alternate" type="text/html" title="Borderline Detours" /><published>2025-02-02T10:31:00+00:00</published><updated>2025-02-02T10:31:00+00:00</updated><id>http://0.0.0.0:4000/2025/02/02/borderline-detours</id><content type="html" xml:base="http://0.0.0.0:4000/2025/02/02/borderline-detours.html"><![CDATA[<p><img src="/images/2025/02/avianca-airplane.jpeg" alt="Airplane shot" /></p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2025-10-31T17:42:23+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">Felipe Lima</title><subtitle>The website and blog of Felipe Lima.</subtitle><entry><title type="html">Breaking up with big tech: A year into homelabbing</title><link href="http://0.0.0.0:4000/2025/10/31/homelabbing.html" rel="alternate" type="text/html" title="Breaking up with big tech: A year into homelabbing" /><published>2025-10-31T10:31:00+00:00</published><updated>2025-10-31T10:31:00+00:00</updated><id>http://0.0.0.0:4000/2025/10/31/homelabbing</id><content type="html" xml:base="http://0.0.0.0:4000/2025/10/31/homelabbing.html"><![CDATA[<p>I have a completely random new hobby that I’ve picked up over the past year or so:</p>
+
+<p>Homelabbing.</p>
+
+<h2 id="how-it-started">How it started</h2>
+
+<p>I call it “random” because I didn’t know this was a thing before I started. To me, it’s always been “I have a desktop PC at home and like to tinker with it for fun.” I haven’t had one in a long time—probably since my early twenties, when laptops became ubiquitous. I ported my life to the cloud and ditched my home PC.</p>
+
+<p>Being fully mobile has its benefits, but I’ve grown increasingly worried about how much big tech companies know about me. Google basically owns my life: Gmail, Messages, Drive, Photos, Calendar, Contacts, Google Fi—the list goes on. My entire life is there. They certainly know more about me than I know about myself, which is scary.</p>
+
+<p>I’ve been thinking more about breaking that dependency. Buying a desktop PC off Craigslist in May 2024 was the first step. At the time, I inventoried my most heavily used Google services:</p>
+
+<ul>
+  <li>Google Drive: 13.2 GB</li>
+  <li>Gmail: 8.7 GB</li>
+  <li>Google Photos: 106.5 GB</li>
+</ul>
+
+<p>Gmail will probably be the hardest of these three, so I decided to start with Google Photos—I had a clear migration path: move to <a href="https://immich.app/">Immich</a>.</p>
+
+<p>The migration turned out to be less daunting than I expected. <a href="https://takeout.google.com">Google Takeout</a> made the whole process much more approachable. I’m definitely grateful for that tool.</p>
+
+<h2 id="nas">NAS</h2>
+
+<p>I started by getting a <a href="https://en.wikipedia.org/wiki/Network-attached_storage">NAS</a> on eBay, which opened up another huge rabbit hole. <a href="https://mtlynch.io/budget-nas/">Michael Lynch’s</a> excellent blog post helped me a ton—go read it if you’re interested, as it goes into much more depth on this topic.</p>
+
+<p>I ended up with a HPE ProLiant MicroServer Gen10 Plus v2 G6405 2-core 1P 16GB-U VROC - P69102-005. It’s probably overpowered (and overpriced) for running <a href="https://www.truenas.com/">TrueNAS</a>, but I like the build quality and form factor—it’s quite small and the hardware is “enterprise grade,” which hopefully means it’s built to last. It has 21TB of usable storage, which should last me a few years at least.</p>
+
+<p><img src="/images/2025/10/nas.png" alt="image.png" /></p>
+
+<p>Before I jumped into homelabbing, I had no idea there was an entire <a href="https://www.reddit.com/r/homelab/">community</a> around it, with tons of content online. It’s been perfect for scratching both my nerd itch and my self-reliance itch at the same time!</p>
+
+<h2 id="how-its-going">How it’s going</h2>
+
+<p>Here’s the server config I landed on, as of today, after a few minor upgrades along the way:</p>
+
+<ul>
+  <li>CPU: Intel Core i7-13700K</li>
+  <li>GPU: Gigabyte GeForce RTX 4080 16GB</li>
+  <li>RAM: Teamforce RGB 64GB 3200MHz DDR4</li>
+  <li>Motherboard: <a href="https://us.msi.com/Motherboard/PRO-Z790-P-DDR4/Specification">MSI Z790-P DDR4</a></li>
+  <li>Air Cooler: 2x Noctua NF A12x25</li>
+  <li>Storage: WD_black sn850X 1TB SSD + Seagate Barracuda Pro 12TB HDD SATA</li>
+  <li>Power: NZXT C750</li>
+  <li>Case: NZXT H7</li>
+  <li>Ubuntu 25</li>
+</ul>
+
+<p>It’s a pretty beefy server, capable of running the full workload and not even break a sweat 🥵.</p>
+
+<p>After migrating all my photos to Immich, I started thinking of other low hanging fruit I could <a href="https://www.reddit.com/r/selfhosted/">self host</a>. Fast forward about a year, I ended up with this ever growing list of running services 😅:</p>
+
+<ul>
+  <li>Finances - Self-hosted personal finances management (private, custom built)</li>
+  <li><a href="https://frigate.video/">Frigate</a> - NVR with AI object detection plus some <a href="https://www.amazon.com/dp/B0BMWFTFLS">Amcrest</a> cameras</li>
+  <li><a href="https://nicolargo.github.io/glances/">Glances</a> - System monitoring tool</li>
+  <li><a href="https://github.com/qdm12/gluetun">Gluetun</a> - VPN client and router</li>
+  <li><a href="[https://gethomepage.dev/](https://gethomepage.dev/)">Homepage</a> - App dashboard</li>
+  <li><a href="[https://www.home-assistant.io/](https://www.home-assistant.io/)">Home Assistant</a> - Home automation</li>
+  <li><a href="https://immich.app/">Immich</a> - Self-hosted photo and video backup</li>
+  <li><a href="https://github.com/Jackett/Jackett">Jackett</a> - Torrent tracker indexer</li>
+  <li><a href="https://ollama.com/">Ollama</a> - Local LLM server</li>
+  <li><a href="https://openwebui.com/">Open Web UI</a> - Local LLM chat interface</li>
+  <li><a href="https://pi-hole.net/">Pi-Hole</a> - Network-wide ad blocker</li>
+  <li><a href="https://www.qbittorrent.org/">QBittorrent</a> - Torrent client</li>
+  <li><a href="https://docs.docker.com/registry/">Docker Registry</a> - Private Docker image registry</li>
+  <li><a href="https://traefik.io/">Traefik</a> - Reverse proxy and load balancer</li>
+  <li><a href="[https://tailscale.com/](https://tailscale.com/)">Tailscale</a> - Private VPN</li>
+  <li><a href="https://vaultwarden.com/">Vaultwarden</a> - Self-hosted password manager</li>
+  <li><a href="https://github.com/containrrr/watchtower">Watchtower</a> - Automatic container updates</li>
+</ul>
+
+<p>That’s quite a list! Everything runs smoothly with Docker Compose 😍—except for Home Assistant, which runs HAOS on its own VirtualBox VM (the Docker installation can’t run add-ons, which was a deal breaker for me).</p>
+
+<p>I also registered my own homelab domain with <a href="https://aws.amazon.com/route53/">AWS Route 53</a> and pointed it to my Tailscale server IP. Now I can access my home network from anywhere on my phone or laptop, as long as I’m connected to Tailscale. Complete with TLS from <a href="https://letsencrypt.org/">Let’s Encrypt</a>!</p>
+
+<p>Not gonna lie, it’s a pretty sweet setup! For example, I can navigate to <a href="http://photos.lab.example.com"><code class="language-plaintext highlighter-rouge">photos.lab.example.com</code></a> (not my actual domain, of course) and connect to any of the services above, since they all sit behind the Traefik reverse proxy.</p>
+
+<h2 id="next-steps">Next steps</h2>
+
+<p>While I’m pretty happy with my current setup, there’s still a long list of cloud services I’d like to get rid of. Namely, Gmail and Drive are probably next on my list for 2026. I’ve also been working on a way to make it much easier to launch and run my own private apps in my home network with a single command. The pitch is:</p>
+
+<aside>
+💡
+
+What if you could have your own private [Heroku](https://www.heroku.com/) running in your homelab? That’s why I started working on `hl` (short for “homelab”).
+
+</aside>
+
+<p>My goal is to <code class="language-plaintext highlighter-rouge">hl init appname</code>, <code class="language-plaintext highlighter-rouge">git remote add production ssh://homelab/app.git</code> then <code class="language-plaintext highlighter-rouge">git push production master</code> which builds the Docker image, sets up a <code class="language-plaintext highlighter-rouge">systemctl</code> service and starts it up behind Traefik. Then, I could immediately go to <a href="http://appname.lab.example.com"><code class="language-plaintext highlighter-rouge">appname.lab.example.com</code></a> and see it running in my VPN automagically. This is already possible today, but I’d like to expand on it so it’s more useful over time and hopefully useful for other people as well!</p>
+
+<p>If you’d like to try it, check out the <a href="https://github.com/felipecsl/hl">Github repo</a> and let me know! Contributions are always welcome.</p>
+
+<p>*Disclaimer: An LLM was used to help improve my writing. Nevertheless, rest assured this article was crafted by a human (myself) 🤖.</p>]]></content><author><name></name></author><summary type="html"><![CDATA[I have a completely random new hobby that I’ve picked up over the past year or so:]]></summary></entry><entry><title type="html">Borderline Detours</title><link href="http://0.0.0.0:4000/2025/02/02/borderline-detours.html" rel="alternate" type="text/html" title="Borderline Detours" /><published>2025-02-02T10:31:00+00:00</published><updated>2025-02-02T10:31:00+00:00</updated><id>http://0.0.0.0:4000/2025/02/02/borderline-detours</id><content type="html" xml:base="http://0.0.0.0:4000/2025/02/02/borderline-detours.html"><![CDATA[<p><img src="/images/2025/02/avianca-airplane.jpeg" alt="Airplane shot" /></p>
 
 <p>As I made my way from Miami to São Paulo once again last week, I thought I’d pause and reflect on all the times I’ve
 taken this trip over the past 13 years.</p>
@@ -620,91 +713,4 @@ in this space for the right reasons will continue to do so, irrespectively of th
 etc, as I’ve done so since 2014. For now, I’ll take some time to rest, experiment, learn, think, read,
 write, be bored, travel.</p>
 
-<p>I got a lot more stuff that I’m brewing in the meantime, so expect more updates here soon 🍻</p>]]></content><author><name></name></author><summary type="html"><![CDATA[Two weeks ago today I decided to quit my job at QuickNode after exactly one year and one day. It was certainly a shorter amount of time than I had initially anticipated, but I feel pretty good about how much we’ve accomplished. I’ll cover here what actually got done, how it went and what’s coming next for me.]]></summary></entry><entry><title type="html">2021 Retrospective</title><link href="http://0.0.0.0:4000/2021/12/05/2021-retrospective.html" rel="alternate" type="text/html" title="2021 Retrospective" /><published>2021-12-05T17:36:00+00:00</published><updated>2021-12-05T17:36:00+00:00</updated><id>http://0.0.0.0:4000/2021/12/05/2021-retrospective</id><content type="html" xml:base="http://0.0.0.0:4000/2021/12/05/2021-retrospective.html"><![CDATA[<p>What a year! 2021 felt to me like a rollercoaster ride. Tons of ups and downs, however ending on a
-high note. This post summarizes my last 12 months, what I learned along this journey, highlights,
-lowlights and what the future holds.</p>
-
-<p>I had to actually write a pre-retro brainstorming post for myself just so I could remember all the
-defining moments of this year since there were so many. I found that to be a useful exercise though
-and will probably keep doing it for future retrospectives., which I plan to write every year.</p>
-
-<p>Overall I’d say it’s been a good year but with tons of challenges.</p>
-
-<h3 id="️-top-highlight">⬆️ Top highlight</h3>
-
-<p>Julia and I got engaged. She said “yes”. 💍</p>
-
-<h3 id="️-top-lowlight">⬇️ Top lowlight</h3>
-
-<p>Had to part ways with my dog, Chaves. I won’t go into details on this one but suffice to say it
-was an incredibly painful and traumatic event.</p>
-
-<h3 id="-key-learnings">📚 Key Learnings</h3>
-
-<blockquote>
-  <p>“Learn to accept people for who they are”</p>
-</blockquote>
-
-<blockquote>
-  <p><em>“The only measure of intelligence is getting what you want out of life”</em></p>
-</blockquote>
-
-<blockquote>
-  <p>“<em>The quality of your thoughts determine the quality of your life”</em></p>
-</blockquote>
-
-<blockquote>
-  <p>“<em>You are who you pretend to be”</em></p>
-</blockquote>
-
-<h3 id="-key-moments">🔑 Key moments</h3>
-
-<ul>
-  <li>April: <a href="/2021/04/19/why-i-quit-my-job-at-stripe.html">Quit my job at Stripe after 2.5 years, tired and burned out.</a></li>
-  <li>April to August: <a href="/2021/07/09/funemployment-june-update.html">Went on a sabbatical</a> for the first time in my career</li>
-  <li>August: Prematurely ended my sabbatical and <a href="https://twitter.com/felipecsl/status/1425493116031705094">joined QuickNode</a></li>
-</ul>
-
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">I&#39;m thrilled to share that I&#39;ve decided to join the team at <a href="https://twitter.com/QuickNode?ref_src=twsrc%5Etfw">@QuickNode</a> to help shape the future of web3 infrastructure. This is an exciting time to be working in the crypto space and I can&#39;t wait to see what we&#39;re gonna build together</p>&mdash; lima.eth (@felipecsl) <a href="https://twitter.com/felipecsl/status/1425493116031705094?ref_src=twsrc%5Etfw">August 11, 2021</a></blockquote>
-<script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-<p>This bullet point deserves a more in-depth explanation. 4 months of sabbatical was definitely less
-than I was hoping to take, however I couldn’t let this opportunity go by. As <a href="https://twitter.com/tferriss">Tim Ferriss</a> mentioned on
-The 4-Hour Workweek, <a href="https://www.goodreads.com/work/quotes/1885647-the-4-hour-workweek-escape-9-5-live-anywhere-and-join-the-new-rich">“For all of the most important things, the timing always sucks.”</a></p>
-
-<p>I ran into QuickNode organically while doing a Google search for <a href="https://www.quicknode.com/chains/bsc">a BSC node service</a>,
-after getting frustrated trying to spin it up it myself for a side project I was working on to learn web3.</p>
-
-<p>Even though I hadn’t previously tried QuickNode as a customer, I was really both impressed and excited
-by the business they built, especially with such a small team. I decided to reach out and chat.
-We immediately connected and I felt like it was the right move, but was still a bit hesitant. After
-<em>a lot of</em> deliberation, I finally decided to take the leap and join about a month later.</p>
-
-<p>QuickNode checked all the boxes for me: Small, humble and talented team, web3, infrastructure
-as a service, <a href="https://www.refreshmiami.com/quicknode-raises-a-35m-series-a-round-led-by-tiger-global/">hyper growth and early stage</a>,
-technically challenging. I had been playing with the idea to go back to my roots and join a startup
-again, but this time in the crypto space. The timing was right. That was the opportunityI was looking for.</p>
-
-<p>Fast forward another 4 months, I couldn’t be happier with my decision. The company is in a great
-trajectory, I’m enjoying the work tremendously and having fun on a daily basis. A lot of times it
-doesn’t feel like work, that feeling when you get so deep in “the zone” that when you look at your
-watch and it’s already 5pm and you realize that the day flew by. That’s the feeling I was looking for.
-It felt right.</p>
-
-<p>The new job, coupled with a newly <em>minted</em> engagement, officially marked the end of a tide of negative
-events that had happened in a row during the first half of the year. It’s all behind me now.</p>
-
-<p>This year I also decided to take my mental health more seriously and act on it. Looking back it’s
-pretty obvious. Hindsight is 20/20. I was in a bad place and needed to do something about it. I’m lucky enough to have a support system
-around me that helped navigating these dark times and leaving them behind. Today decide to I focus more on positivity,
-having a balanced life and have been trying to get into a daily meditation routine 🧘🏽. This is a big
-focus are for me in 2022.</p>
-
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">We had a blast 💥 <a href="https://t.co/cPgXI6bSPm">https://t.co/cPgXI6bSPm</a></p>&mdash; lima.eth (@felipecsl) <a href="https://twitter.com/felipecsl/status/1464553319448334342?ref_src=twsrc%5Etfw">November 27, 2021</a></blockquote>
-<script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-<p>Beyond that, even managed to go on a surf trip to Fuerteventura in the Canary Islands, where I tried to
-improve a bit my surf skills and met with a group of extremely talented entrepreneurs. I had a great
-time and am looking forward to more of these in the future. Maybe surfing in Portugal in 2022? 🏄🏻‍♂️</p>
-
-<p>Aloha! Happy new year.</p>]]></content><author><name></name></author><summary type="html"><![CDATA[What a year! 2021 felt to me like a rollercoaster ride. Tons of ups and downs, however ending on a high note. This post summarizes my last 12 months, what I learned along this journey, highlights, lowlights and what the future holds.]]></summary></entry></feed>
+<p>I got a lot more stuff that I’m brewing in the meantime, so expect more updates here soon 🍻</p>]]></content><author><name></name></author><summary type="html"><![CDATA[Two weeks ago today I decided to quit my job at QuickNode after exactly one year and one day. It was certainly a shorter amount of time than I had initially anticipated, but I feel pretty good about how much we’ve accomplished. I’ll cover here what actually got done, how it went and what’s coming next for me.]]></summary></entry></feed>

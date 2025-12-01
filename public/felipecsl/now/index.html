@@ -17,13 +17,13 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>
-    ASP.NET MVC custom errors with the HandleError attribute
+    What I'm doing now
   </title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Helping companies build exceptional products and scale engineering teams." />
   <link
     rel="canonical"
-    href="http://localhost:4000/2009/10/22/asp-net-mvc-custom-errors-with-the-handleerror-attribute.html"
+    href="http://localhost:4000/now/"
   />
   <link rel="stylesheet" href="/assets/main.css">
   <!-- Custom CSS & Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
@@ -60,57 +60,19 @@
       </nav></div>
 </header>
 <main class="page-content" aria-label="Content">
-      <div class="wrapper"><article
-  class="post h-entry"
-  itemscope
-  itemtype="http://schema.org/BlogPosting"
->
+      <div class="wrapper"><article class="post">
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">
-      ASP.NET MVC custom errors with the HandleError attribute
-    </h1>
-    <p class="post-meta"><time
-        class="dt-published"
-        datetime="2009-10-22T06:57:00-02:00"
-        itemprop="datePublished"
-      >
-        Oct 22, 2009
-      </time></p>
+    <h1 class="post-title">What I&#39;m doing now</h1>
   </header>
 
-  <div class="post-content e-content" itemprop="articleBody"><p>Handling exceptions in ASP.NET MVC is quite easy once you get to know the details surrounding the <code class="language-plaintext highlighter-rouge">HandleError</code> attribute. You can specify that a controller or a specific Action will handle errors and you can even choose which View to show based on the exception being thrown. Scott Guthrie <a href="http://weblogs.asp.net/scottgu/archive/2008/07/14/asp-net-mvc-preview-4-release-part-1.aspx">wrote</a> about this.</p>
+  <div class="post-content"><p>Updated December 2025.</p>
 
-<p>What he didn’t tell us, is that there are some prerequisites for it to work as expected. First of all, you need to enable custom errors in the application web.config file:</p>
+<p>I’m currently in Brazil until January 2026,
+taking a break from full-time work to take care of my now two years
+old daughter, aging mother, rest, recharge and think about the future.</p>
 
-<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;customErrors</span> <span class="na">mode=</span><span class="s">"On"</span> <span class="nt">/&gt;</span>
-</code></pre></div></div>
-
-<p>Second, the order that you put the HandleError attributes will affect which View will actualy gonna be rendered at the end. I was trying to render a custom view based on an InvalidOperationException being throw on my action. The code looked like this:</p>
-
-<div class="language-c# highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-<span class="p">[</span><span class="n">HandleError</span><span class="p">]</span>
-<span class="k">public</span> <span class="k">class</span> <span class="nc">HomeController</span> <span class="p">:</span> <span class="n">QuavioController</span> <span class="p">{</span>
-    <span class="p">[</span><span class="nf">HandleError</span><span class="p">(</span><span class="n">ExceptionType</span> <span class="p">=</span> <span class="k">typeof</span><span class="p">(</span><span class="n">InvalidOperationException</span><span class="p">),</span> <span class="n">View</span> <span class="p">=</span> <span class="p">&lt;</span><span class="n">span</span> <span class="k">class</span><span class="err">="</span><span class="nc">str</span><span class="s">"&gt;"</span><span class="n">InvalidOpJoinRoom</span><span class="s">")]
-</span>    <span class="k">public</span> <span class="n">ActionResult</span> <span class="nf">JoinRoom</span><span class="p">()</span> <span class="p">{</span>
-        <span class="k">throw</span> <span class="k">new</span> <span class="nf">InvalidOperationException</span><span class="p">();</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div></div>
-
-<p>What happened is that the <code class="language-plaintext highlighter-rouge">JoinRoom</code> was returning the shared Error View, instead of the <code class="language-plaintext highlighter-rouge">InvalidOpJoinRoom</code> View. This happens because the <code class="language-plaintext highlighter-rouge">HomeController</code> contains a <code class="language-plaintext highlighter-rouge">HandleError</code> attribute (line 1), which overrides the JoinRoom’s <code class="language-plaintext highlighter-rouge">HandleError</code> behavior (line 4), which should return the InvalidOpJoinRoom View.</p>
-
-<p>The fix is very simple: Remove the <code class="language-plaintext highlighter-rouge">HandleError</code> atribute from the controller and let the actual actions define the proper error handling behavior.</p>
-
-<p>Conclusion: Be aware that multiple <code class="language-plaintext highlighter-rouge">HandleError</code> attributes in a controller may alter the order which View evaluation is executed and then causing the final View not to be the view you were actually expecting.</p>
+<p>In the meantime I’m available for part time, hourly contracting work.</p>
 </div>
-  <hr class="post-bottom-separator" />
-  <script
-    async
-    data-uid="f5e0a95197"
-    src="https://marvelous-builder-9321.ck.page/f5e0a95197/index.js"
-  ></script>
-
-  <a class="u-url" href="/2009/10/22/asp-net-mvc-custom-errors-with-the-handleerror-attribute.html" hidden></a>
 </article>
 </div>
     </main><footer class="site-footer h-card">

@@ -1,5 +1,5 @@
 ---
 layout: archive
-title: Blog Archives
+title: Archives
 permalink: /archives/
 ---

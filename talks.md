@@ -4,7 +4,7 @@ title: Talks
 permalink: /talks/
 ---
 
-Here are some talks and interviews featuring myself 😄:
+Here are some of my public appearances:
 
 <div class="archive">
   <ul class="post-list">

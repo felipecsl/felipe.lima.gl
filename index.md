@@ -70,5 +70,5 @@ layout: home
   <li><a href="https://github.com/felipecsl">github</a></li>
   <li><a href="https://twitter.com/felipecsl">twitter</a></li>
   <li><a href="https://www.linkedin.com/in/felipecsl">linkedin</a></li>
-  <li><a href="mailto:felipe.lima@gmail.com">email</a></li>
+  <li><a href="mailto:felipe@lima.gl">email</a></li>
 </ul>

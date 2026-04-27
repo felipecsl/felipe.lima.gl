@@ -1,13 +1,13 @@
 ---
 layout: page
-title: What I'm doing now
+title: now
 permalink: /now/
 ---
 
-Updated December 2025.
+<p class="tertiary">updated 2025.12</p>
 
-I'm currently in Brazil until January 2026,
-taking a break from full-time work to take care of my now two years
-old daughter, aging mother, rest, recharge and think about the future.
+i'm in brazil through january 2026, taking a break from full-time work to
+look after my two-year-old daughter and aging mother, recharge, and think
+about what's next.
 
-In the meantime I'm available for part time, hourly contracting work.
+available for part-time, hourly contracting in the meantime.

@@ -2,81 +2,73 @@
 layout: home
 ---
 
-<section class="hero-section">
-  <div class="hero-content">
-    <h1 class="hero-title">Felipe Lima</h1>
-    <p class="hero-description">
-      I help companies build exceptional software and scale their engineering teams. 
-      With 15+ years of experience at companies like <strong>Airbnb</strong>, <strong>Stripe</strong>, 
-      and <strong>ThoughtWorks</strong>, I bring deep expertise in system design, team leadership, 
-      and delivering impactful solutions.
-    </p>
-    <div class="hero-cta">
-      <a href="mailto:felipe@lima.gl" class="btn-primary">Get in Touch</a>
-      <a href="/about/" class="btn-secondary">Learn More</a>
-    </div>
-  </div>
-  <div class="hero-image">
-    <img src="/images/avatar-2023-bw.jpg" alt="Felipe Lima"/>
-  </div>
-</section>
+<h1>felipe lima</h1>
+<p class="subtitle">engineer · seattle · originally from southern brazil</p>
 
-<section class="services-section">
-  <h2 class="section-title">How I Can Help</h2>
-  <div class="services-grid">
-    <div class="service-card">
-      <div class="service-icon">⚙️</div>
-      <h3>Technical Leadership</h3>
-      <p>Interim or fractional CTO/VP of Eng roles, technical strategy, and architecture reviews for growing teams.</p>
-    </div>
-    <div class="service-card">
-      <div class="service-icon">🚀</div>
-      <h3>Product Development</h3>
-      <p>End-to-end product development from concept to launch, with focus on scalable, maintainable systems.</p>
-    </div>
-    <div class="service-card">
-      <div class="service-icon">📈</div>
-      <h3>Team Scaling</h3>
-      <p>Engineering team assessment, hiring processes, and establishing best practices for high-performing teams.</p>
-    </div>
-  </div>
-</section>
+<p>
+  i write software for a living and have been doing it since the late 2000s.
+  past stops include thoughtworks, airbnb, and stripe. these days i mostly tinker,
+  read, write, and spend time with my family.
+</p>
 
-<section class="experience-section">
-  <h2 class="section-title">Experience</h2>
-  <p class="experience-intro">I've had the privilege of working with world-class teams at:</p>
-  <div class="company-logos">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/b/ba/Stripe_Logo%2C_revised_2016.svg" alt="Stripe" class="company-logo" />
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/69/Airbnb_Logo_B%C3%A9lo.svg" alt="Airbnb" class="company-logo" />
-    <img src="https://upload.wikimedia.org/wikipedia/commons/e/e5/Thoughtworks_logo_2020.png" alt="ThoughtWorks" class="company-logo" />
-  </div>
-</section>
+<hr />
 
-<section class="articles-section">
-  <h2 class="section-title">Recent Articles</h2>
-  <ul class="articles-list">
-    <li class="article-item">
-      <span class="article-date">Oct 31, 2025</span>
-      <a class="article-link" href="/2025/10/31/homelabbing.html">Breaking up with big tech: A year into homelabbing</a>
-    </li>
-    <li class="article-item">
-      <span class="article-date">Feb 2, 2025</span>
-      <a class="article-link" href="/2025/02/02/borderline-detours.html">Borderline Detours</a>
-    </li>
-    <li class="article-item">
-      <span class="article-date">Aug 14, 2024</span>
-      <a class="article-link" href="/2024/08/14/reframing-expectations.html">Reframing Expectations</a>
-    </li>
-  </ul>
-  <a href="{% link archive.md %}" class="view-all-link">View all articles →</a>
-</section>
+<p class="section-label">[ now ]</p>
 
-<section class="contact-section">
-  <h2 class="section-title">Let's Work Together</h2>
-  <p>Interested in discussing how I can help your team? I'd love to hear from you.</p>
-  <a href="mailto:felipe@lima.gl" class="btn-primary">Start a Conversation</a>
-  <div class="newsletter-signup">
-    <p class="newsletter-text">Or subscribe to my newsletter for updates on new articles as I write them:</p>
-    <script async data-uid="6486d12bcb" src="https://marvelous-builder-9321.ck.page/6486d12bcb/index.js"></script>
-  </div>
-</section>
+<p>
+  currently in brazil through january 2026, taking a break from full-time work
+  to look after my two-year-old daughter and aging mother, recharge, and think
+  about what's next. available for part-time, hourly contracting in the meantime.
+  more on the <a href="{{ '/now/' | relative_url }}">now page</a>.
+</p>
+
+<hr />
+
+<p class="section-label">[ writing ]</p>
+
+<ul class="entry-list">
+  {% for post in site.posts limit:5 %}
+  <li>
+    <span class="entry-date">{{ post.date | date: "%Y.%m.%d" }}</span>
+    <a class="entry-title" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+  </li>
+  {% endfor %}
+</ul>
+
+<p><a href="{{ '/archives/' | relative_url }}">all writing →</a></p>
+
+<hr />
+
+<p class="section-label">[ projects ]</p>
+
+<ul class="projects-list">
+  <li>
+    <a class="project-name" href="https://github.com/felipecsl/wombat">wombat</a>
+    <span class="project-desc">lightweight ruby crawler with a minimalist dsl</span>
+  </li>
+  <li>
+    <a class="project-name" href="https://github.com/felipecsl/ktnes">ktnes</a>
+    <span class="project-desc">multiplatform nes emulator written in kotlin</span>
+  </li>
+  <li>
+    <a class="project-name" href="https://github.com/felipecsl/AsymmetricGridView">AsymmetricGridView</a>
+    <span class="project-desc">android listview that mimics a gridview with asymmetric items</span>
+  </li>
+  <li>
+    <a class="project-name" href="https://github.com/felipecsl/GifImageView">GifImageView</a>
+    <span class="project-desc">android imageview for animated gifs</span>
+  </li>
+</ul>
+
+<p><a href="{{ '/projects/' | relative_url }}">more projects →</a></p>
+
+<hr />
+
+<p class="section-label">[ elsewhere ]</p>
+
+<ul class="elsewhere">
+  <li><a href="https://github.com/felipecsl">github</a></li>
+  <li><a href="https://twitter.com/felipecsl">twitter</a></li>
+  <li><a href="https://www.linkedin.com/in/felipecsl">linkedin</a></li>
+  <li><a href="mailto:felipe.lima@gmail.com">email</a></li>
+</ul>

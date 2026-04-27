@@ -1,39 +1,33 @@
 ---
 layout: default
-list_title: "Blog Archives"
 ---
+
 <div class="archive">
+  <h1 class="post-title">{{ page.title | escape }}</h1>
+  <hr />
+
   {%- if site.posts.size > 0 -%}
-    <h2 class="post-list-heading">{{ page.list_title | default: "Blog Archives" }}</h2>
     <ul class="post-list">
       {%- for post in site.posts -%}
       <li>
-        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-        <span class="post-meta">{{ post.date | date: date_format }}</span>
+        <span class="post-meta">
+          <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y.%m.%d" }}</time>
+        </span>
         {% if post.external_url %}
-        <dd class="{{ post.external_site }}">
-          <a class="post-link" href="{{ post.external_url }}" target="_blank">
-            {{ post.title | escape }}
-          </a>
-        </dd>
+          <dd class="{{ post.external_site }}">
+            <a class="post-link" href="{{ post.external_url }}" target="_blank" rel="noopener">{{ post.title | escape }}</a>
+          </dd>
         {% else %}
-        <h3>
-          <a class="post-link" href="{{ post.url | relative_url }}">
-            {{ post.title | escape }}
-          </a>
-        </h3>
+          <h3>
+            <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+          </h3>
         {% endif %}
-        {%- if site.show_excerpts -%}
-        {{ post.excerpt }}
-        {%- endif -%}
       </li>
       {%- endfor -%}
     </ul>
 
     <p class="feed-subscribe">
-      <svg class="svg-icon orange">
-        <use xlink:href="{{ '/assets/minima-social-icons.svg#rss' | relative_url }}"></use>
-      </svg><a href="{{ "/feed.xml" | relative_url }}">Subscribe</a>
+      <a href="{{ '/feed.xml' | relative_url }}">rss</a>
     </p>
   {%- endif -%}
 </div>

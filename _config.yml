@@ -13,11 +13,11 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Felipe Lima
-email: felipe.lima@gmail.com
+title: felipe lima
+email: felipe@lima.gl
 destination: public/felipecsl
 description: >- # this means to ignore newlines until "baseurl:"
-  Helping companies build exceptional products and scale engineering teams.
+  the personal website of felipe lima
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://felipe.lima.gl"
 twitter_username: felipecsl

@@ -1,25 +1,24 @@
 ---
 layout: page
-title: About
+title: about
 permalink: /about/
 ---
 
-<img alt="me photobombing" title="me photobombing" src="/images/about-photo.png"/>
+felipe lima is a brazilian american engineer.
 
-Felipe Lima is a Brazilian American technologist and entrepreneur.
+he has been working in software since the early 2000s, with stops at
+thoughtworks, airbnb, and stripe. co-founded the bitcoin startup coinverse
+in 2014 (later acquired by coinbr). holds a bachelor's in computer science
+from [pucrs](http://www.pucrs.br/).
 
-Felipe has been involved in the tech industry since the late 2000's, having worked for companies like
-ThoughtWorks, Airbnb and Stripe. Co-founded the Bitcoin startup Coinverse in 2014, later acquired
-by CoinBR. Felipe holds a bachelors degree in Computer Science from [PUCRS](http://www.pucrs.br/).
+minimalist at heart. believes the best code is no code at all.
 
-Felipe is an early crypto investor and enthusiast. A minimalist at heart and believer that the best
-code is no code at all.
+<p class="section-label">[ interests ]</p>
 
-### Interests
+- bitcoin
+- derivatives trading
+- data visualization
+- privacy & security
+- self-hosting and homelabbing
 
-- Cryptocurrencies, privacy and decentralization
-- Finance, investing & derivatives trading
-- Data viz
-- Security
-
-What am I doing [now](/now/)?
+what i'm doing [now](/now/).

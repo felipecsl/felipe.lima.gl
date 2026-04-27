@@ -2,93 +2,44 @@
 layout: default
 ---
 
-<div class="projects">
-  <p>
-    These are some of the open source projects that I've built over the years.
-    You can find the full list on my
-    <a href="https://github.com/felipecsl?tab=repositories">Github profile.</a>
-  </p>
+<article class="post">
+  <header class="post-header">
+    <h1 class="post-title">{{ page.title | escape }}</h1>
+  </header>
 
-  <ul>
-    <li>
-      <a href="https://github.com/felipecsl/wombat">Wombat</a>
-      <span class="description">
-        Lightweight Ruby crawler with a minimalist and elegant DSL.
-      </span>
-      <span class="repo-language">
-        <span
-          class="repo-language-color"
-          style="background-color: #701516"
-        ></span>
-        Ruby
-      </span>
-    </li>
-    <li>
-      <a href="https://github.com/felipecsl/AsymmetricGridView"
-        >AsymmetricGridView</a
-      >
-      <span class="description"
-        >Android ListView that mimics a GridView with asymmetric items</span
-      >
-      <span class="repo-language">
-        <span
-          class="repo-language-color"
-          style="background-color: #b07219"
-        ></span>
-        Java
-      </span>
-    </li>
-    <li>
-      <a href="https://github.com/EliFUT/android">EliFUT</a>
-      <span class="description">A "football manager" style Android game</span>
-      <span class="repo-language">
-        <span
-          class="repo-language-color"
-          style="background-color: #b07219"
-        ></span>
-        Java
-      </span>
-    </li>
-    <li>
-      <a href="https://github.com/felipecsl/ktnes">ktnes</a>
-      <span class="description"
-        >A multiplatform NES emulator written in Kotlin</span
-      >
-      <span class="repo-language">
-        <span
-          class="repo-language-color"
-          style="background-color: #f18e33"
-        ></span>
-        Kotlin
-      </span>
-    </li>
-    <li>
-      <a href="https://github.com/felipecsl/GifImageView">GifImageView</a>
-      <span class="description"
-        >Android ImageView that handles animated GIF images</span
-      >
-      <span class="repo-language">
-        <span
-          class="repo-language-color"
-          style="background-color: #b07219"
-        ></span>
-        Java
-      </span>
-    </li>
-    <li>
-      <a href="https://github.com/felipecsl/random-maze-generator"
-        >Random Maze Generator</a
-      >
-      <span class="description"
-        >Find the shortest path out of a generated random maze.</span
-      >
-      <span class="repo-language">
-        <span
-          class="repo-language-color"
-          style="background-color: #f1e05a"
-        ></span>
-        JavaScript
-      </span>
-    </li>
-  </ul>
-</div>
+  <hr />
+
+  <div class="post-content">
+    <p class="muted">
+      a few open source things i've built. full list on
+      <a href="https://github.com/felipecsl?tab=repositories">github</a>.
+    </p>
+
+    <ul class="projects-list">
+      <li>
+        <a class="project-name" href="https://github.com/felipecsl/wombat">wombat</a>
+        <span class="project-desc">lightweight ruby crawler with a minimalist DSL</span>
+      </li>
+      <li>
+        <a class="project-name" href="https://github.com/felipecsl/AsymmetricGridView">AsymmetricGridView</a>
+        <span class="project-desc">android listview that mimics a gridview with asymmetric items</span>
+      </li>
+      <li>
+        <a class="project-name" href="https://github.com/EliFUT/android">EliFUT</a>
+        <span class="project-desc">a "football manager" style android game</span>
+      </li>
+      <li>
+        <a class="project-name" href="https://github.com/felipecsl/ktnes">ktnes</a>
+        <span class="project-desc">multiplatform NES emulator written in kotlin</span>
+      </li>
+      <li>
+        <a class="project-name" href="https://github.com/felipecsl/GifImageView">GifImageView</a>
+        <span class="project-desc">android imageview that handles animated gif images</span>
+      </li>
+      <li>
+        <a class="project-name" href="https://github.com/felipecsl/random-maze-generator">random-maze-generator</a>
+        <span class="project-desc">find the shortest path out of a generated random maze</span>
+      </li>
+    </ul>
+  </div>
+</article>

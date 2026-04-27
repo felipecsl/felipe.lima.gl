@@ -3,12 +3,12 @@ layout: home
 ---
 
 <h1>felipe lima</h1>
-<p class="subtitle">engineer · seattle · originally from southern brazil</p>
+<p class="subtitle">engineer · seattle · <a href="https://en.wikipedia.org/wiki/Gaucho">gaúcho</a></p>
 
 <p>
-  i write software for a living and have been doing it since the late 2000s.
+  i write software for a living and have been doing it since the early 2000s.
   past stops include thoughtworks, airbnb, and stripe. these days i mostly tinker,
-  read, write, and spend time with my family.
+  trade, read, write, lift heavy objects and spend time with my family.
 </p>
 
 <hr />
@@ -16,9 +16,9 @@ layout: home
 <p class="section-label">[ now ]</p>
 
 <p>
-  currently in brazil through january 2026, taking a break from full-time work
-  to look after my two-year-old daughter and aging mother, recharge, and think
-  about what's next. available for part-time, hourly contracting in the meantime.
+  back in seattle. running <a href="https://omarchy.org/">omarchy</a>, 
+  building a leveraged carry trade with defi and preferred shares 
+  of digital asset treasuries.
   more on the <a href="{{ '/now/' | relative_url }}">now page</a>.
 </p>
 

@@ -1,4 +1,118 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2026-04-27T04:47:45+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">Felipe Lima</title><subtitle>Helping companies build exceptional products and scale engineering teams.</subtitle><entry><title type="html">Breaking up with big tech: A year into homelabbing</title><link href="http://0.0.0.0:4000/2025/10/31/homelabbing.html" rel="alternate" type="text/html" title="Breaking up with big tech: A year into homelabbing" /><published>2025-10-31T10:31:00+00:00</published><updated>2025-10-31T10:31:00+00:00</updated><id>http://0.0.0.0:4000/2025/10/31/homelabbing</id><content type="html" xml:base="http://0.0.0.0:4000/2025/10/31/homelabbing.html"><![CDATA[<p>I have a completely random new hobby that I’ve picked up over the past year or so:</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2026-05-05T16:41:40+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">felipe lima</title><subtitle>the personal website of felipe lima</subtitle><entry><title type="html">The balance sheet that lets me not work</title><link href="http://0.0.0.0:4000/2026/05/05/the-balance-sheet-that-lets-me-not-work.html" rel="alternate" type="text/html" title="The balance sheet that lets me not work" /><published>2026-05-05T10:31:00+00:00</published><updated>2026-05-05T10:31:00+00:00</updated><id>http://0.0.0.0:4000/2026/05/05/the-balance-sheet-that-lets-me-not-work</id><content type="html" xml:base="http://0.0.0.0:4000/2026/05/05/the-balance-sheet-that-lets-me-not-work.html"><![CDATA[<blockquote>
+  <p><em>Disclaimer: This is not financial, tax, or investment advice. It is a description of how I structure my own balance sheet, with risks I understand and accept for my situation. Borrowing against BTC, using DeFi protocols, and buying preferred stocks can all lose money or create tax consequences. Do your own work and talk to qualified professionals before copying any part of this.</em></p>
+</blockquote>
+
+<p>I’ve never sold a single sat — not because I never needed cash, but because I never needed to sell to get it.</p>
+
+<p>For most of the last decade, my wife and I both worked, ongoing expenses came out of ongoing income, and the BTC stack just sat there doing what it does. Then I started a sabbatical, our household dropped to a single income, and a few months in we got hit with an unexpected tax bill bigger than our checking account.</p>
+
+<p>We covered it. The stack is still intact. The bills are still paid. This article is about how.</p>
+
+<h2 id="why-not-just-sell">Why not just sell?</h2>
+
+<p>A small sale would have covered the tax bill with room to spare, and the dent in the stack would have been minor. So why bother?</p>
+
+<ol>
+  <li><strong>Conviction.</strong> I’ve spent years accumulating a position in what I believe is the best long-term store of value available. Selling to fund consumption — even a tax bill, even a sabbatical — is liquidating the future to pay for the present. If the thesis is right, every sat sold today is many more sats foregone in a decade. The whole point of accumulating a scarce asset is to <em>not</em> sell it under normal circumstances. A tax bill isn’t an extraordinary circumstance.</li>
+  <li><strong>Tax drag.</strong> Every sale is a taxable event. After years of accumulation, the cost basis on most of the stack is deep enough that selling realizes a meaningful gain. That gain compounds the original problem: the tax bill that prompted the sale generates a new tax bill the following April. Selling appreciated BTC to pay taxes is a cycle that gets worse the longer you’ve held — exactly the opposite of how a good capital structure should behave.</li>
+  <li><strong>Optionality.</strong> Once converted to dollars and spent, it’s gone. While it’s still on the balance sheet, it’s collateral, it’s optionality, it’s a reserve. Every dollar of expense covered without selling preserves the entire future of that capital, not just its current value. The stack is more useful as collateral than it ever would be as cash.</li>
+</ol>
+
+<p>The structure below falls out of these three points almost by necessity. If you don’t sell appreciated BTC and you have ongoing expenses, you need a way to turn the stack into cash flow without touching the principal. That’s the whole problem. The rest of this post is the answer.</p>
+
+<h2 id="the-structure">The structure</h2>
+
+<p>Three working layers, one output. The diagram shows how capital moves through them; each paragraph after explains what one layer is doing.</p>
+
+<p><img src="/images/2026/05/btc_carry_trade_conceptual_structure.svg" alt="conceptual_structure.svg" /></p>
+
+<p><strong>BTC collateral.</strong> The stack sits on permissionless lending protocols — primarily <a href="https://aave.com/help/aave-101/accessing-aave">Aave v3</a> and <a href="https://docs.morpho.org/">Morpho</a>. These accept BTC as collateral and lend stablecoins against it, governed by smart contracts and over-collateralization rather than counterparty trust. The stack itself doesn’t move when you borrow against it. It’s locked in a smart contract, but it’s still your BTC, and the position can be unwound at any time by repaying the loan.</p>
+
+<p><strong>Stablecoin debt.</strong> Against the BTC collateral, I borrow <a href="https://www.circle.com/usdc">USDC</a>. The borrow is variable-rate, and the rate moves with utilization in the lending market. The borrowed dollars are mine to deploy however I choose; the protocol doesn’t care what they’re used for. The ratio between borrow size and collateral value, called the health factor, is the key risk dial. More on that later.</p>
+
+<p><strong>Yield vehicles.</strong> The borrowed USDC is deployed into Bitcoin treasury preferred stocks — publicly traded preferreds issued by companies whose treasuries hold Bitcoin and are over-collateralized. The two I hold are <a href="https://www.strategy.com/strc/learn">STRC</a>, issued by <a href="https://www.strategy.com/">Strategy</a> (formerly MicroStrategy), and <a href="https://investors.strive.com/news-events/news-releases/news-details/2026/Strive-Announces-Increase-to-SATA-Perpetual-Preferred-Stock-Dividend-Rate-to-13-00-and-Bitcoin-Buy/default.aspx">SATA</a>, issued by <a href="https://www.strive.com/">Strive, Inc.</a>. Both pay monthly distributions at yields well above current borrow costs. Holding them roughly half-and-half spreads issuer risk while keeping the blended yield in the same band.</p>
+
+<p><strong>The output.</strong> Distributions land in the brokerage every month. Some of it covers living expenses, some compounds back into more shares, and the cycle continues. The carry — the spread between what the preferreds pay and what the loan costs — is the engine. As long as the spread stays positive and the collateral stays healthy, the structure produces cash flow indefinitely. The stack does not move.</p>
+
+<hr />
+
+<p>That’s the structure at a high level. Operationally, getting BTC into the system and dollars out of it involves a few more steps:</p>
+
+<p><img src="/images/2026/05/btc_carry_trade_operational_pipeline.svg" alt="operational_pipeline.svg" /></p>
+
+<p>The on-ramp moves native BTC from cold storage onto a centralized exchange, swaps it for a wrapped form like <a href="https://wbtc.network/"><code class="language-plaintext highlighter-rouge">WBTC</code></a> or <a href="https://www.coinbase.com/cbbtc"><code class="language-plaintext highlighter-rouge">cbBTC</code></a>, and bridges that token into a self-custody wallet where it can be deposited into Aave or Morpho. The off-ramp runs in reverse: USDC distributions arrive in the brokerage from the preferreds, get converted to dollars at an exchange when needed, and ACH out to a bank account.</p>
+
+<p>Two friction points worth treating carefully. The on-ramp is where custodian risk lives: <code class="language-plaintext highlighter-rouge">WBTC</code> depends on BitGo honoring redemption, <code class="language-plaintext highlighter-rouge">cbBTC</code> depends on Coinbase. That’s a different kind of trust assumption than the protocol risk on Aave or Morpho, and the choice of wrapped token deserves its own post. The off-ramp is where most of the operational tax and timing questions live — when to convert, how much to keep in stablecoins versus dollars, how to think about reserve sizing across both forms. I’ll cover those in a follow-up.</p>
+
+<p>The pipeline is plumbing. The carry is the engine.</p>
+
+<h2 id="what-it-produces">What it produces</h2>
+
+<p>Three outputs, each useful for different reasons.</p>
+
+<p><strong>1. Monthly cash flow.</strong> The preferreds pay distributions monthly. They land in the brokerage on a predictable cadence, in dollar terms, regardless of where BTC is trading. The blended yield on the position sits well above the variable borrow rate on the loan, and the spread between them (the carry) is what makes the whole thing work. As long as that spread stays positive, the position generates more income than it costs to hold. For our household, the carry covers ongoing expenses with room to spare. It’s not passive in the sense that it requires no attention; it’s passive in the sense that it doesn’t require a job.</p>
+
+<p><strong>2. Liquidity on demand.</strong> This is what the tax bill demonstrated. When the bill came due, I didn’t sell anything. I increased the size of the existing loan, withdrew the additional USDC, converted it to dollars, and paid the IRS — all within a couple of days. The stack didn’t move. No realized gain, no fire sale into whatever price BTC happened to be trading at that week. Over the following months, the additional borrow gets paid down out of distribution income.</p>
+
+<p>The general point: any large unexpected expense — a tax bill, a medical event, a major repair — can be funded by temporarily increasing the borrow rather than liquidating the underlying asset. The collateral stays in place. The carry continues. The expense gets absorbed into the existing structure rather than triggering a new round of decisions about what to sell and when.</p>
+
+<p><strong>3. Tax treatment that compounds.</strong> The most counterintuitive of the three, and it makes the strategy meaningfully better than the headline yield suggests.</p>
+
+<p>Distributions from STRC and SATA are expected to be classified as <a href="https://www.irs.gov/publications/p550">return of capital</a> (ROC), which means the IRS generally treats them as the company returning your own capital to you rather than paying you income. ROC distributions aren’t taxed in the year you receive them to the extent you still have basis in the shares. Instead, they reduce your cost basis, and tax is deferred until you eventually sell — at which point the gain is calculated against the lower basis. In practice: much of the cash flow arrives tax-deferred, the eventual tax event is a capital gain at a future date of your choosing, and the compounding inside the position runs with less annual tax drag.</p>
+
+<p>Three outputs, one engine. The stack stays put through all of it.</p>
+
+<h2 id="risk-management">Risk management</h2>
+
+<p>At this point, this probably sounds either too good or too risky depending on your priors. Both reactions are reasonable. This section is about the dials that determine which one is closer to right.</p>
+
+<p><strong>1. The health factor.</strong> Every position on a lending protocol carries a health factor (HF) — the ratio between collateral value and borrow value, adjusted for the protocol’s liquidation threshold. When HF falls below 1, the protocol liquidates a portion of your collateral to pay down the loan. This is the risk every BTC-collateralized borrower needs to understand before doing anything else.</p>
+
+<p>The dial is set by how much you borrow against a given amount of collateral. Borrow aggressively and HF sits close to the liquidation line; borrow conservatively and there’s significant headroom. I run a conservative HF — meaningful headroom against a fast drawdown, with capacity to absorb a sharp drop in BTC price without forced selling. The cushion needs to be large enough to survive the worst drawdown you can plausibly imagine, not the average one. Liquidation isn’t as catastrophic as it sounds — the protocol sells a portion of the collateral, not all of it — but forced selling at the worst possible moment is exactly what this entire structure exists to avoid.</p>
+
+<p><strong>2. The reserve.</strong> A cash reserve held outside the carry engine, sized as a percentage of outstanding debt rather than an absolute number. If BTC drops sharply and HF compresses, the reserve can be deployed to pay down a portion of the loan immediately, restoring headroom without selling a single sat.</p>
+
+<p>The reserve doesn’t earn the full carry — it sits in conservative stablecoin vaults that produce a modest return, and that yield drag is real. I think of it as an insurance premium: it doesn’t pay for itself in normal markets; it pays for itself by preventing the one moment in a decade when you’d otherwise be forced to make a bad decision. I size it at roughly 15-20% of outstanding debt — enough to absorb a significant drawdown without panic, small enough that the yield drag stays modest. Set this dial yourself based on your own drawdown tolerance and conviction.</p>
+
+<p><strong>3. The same-asset hedge.</strong> This dial is structural rather than active, and it’s the insight that makes the whole structure less fragile than it might look.</p>
+
+<p>The collateral is BTC. The debt is dollars. If BTC drops, the dollar value of the collateral falls but the dollar size of the debt is unchanged — that’s what compresses HF. But here’s the structural piece: if the goal is to <em>eventually unwind the loan in BTC terms</em> (repay it from future BTC appreciation rather than from current dollar income), the BTC drawdown is exactly when the debt becomes cheaper in BTC terms. A loan that costs 1 BTC today costs 0.5 BTC if the price doubles, 2 BTC if it halves. The drawdown that’s compressing your HF today is the same drawdown that’s making the loan cheaper to repay tomorrow.</p>
+
+<p>This isn’t a substitute for HF discipline — you still have to survive the drawdown to benefit from the recovery. But it reframes what the borrow actually is. You’re not “in debt”; you’re short dollars and long BTC, with a stablecoin liability whose BTC-denominated cost moves inversely to the asset you’re long.</p>
+
+<p><strong>4. Carry compression.</strong> Slower and less dramatic. The carry is what makes the structure economic. If borrow rates spike or distribution yields compress, the spread narrows. If it goes negative, the engine stops producing income and starts costing money to run.</p>
+
+<p>The management is mostly attention: monitor borrow rates, watch issuer dynamics, be willing to delever or rotate if the carry collapses for structural rather than transient reasons. A short-term utilization spike is something to wait through; a sustained inversion is something to act on.</p>
+
+<hr />
+
+<p>Most of the risks here aren’t market risks in the conventional sense. The structure is robust to BTC volatility — that’s what the health factor and the same-asset framing are for. The risks that matter are operational and structural: managing the collateral cushion, keeping a reserve, monitoring the carry, making thoughtful protocol choices on the wrap and the lending venue. None of these is dramatic. All are continuous. The strategy doesn’t blow up in a single moment; it works or it doesn’t based on whether the dials are watched.</p>
+
+<p>The structure isn’t risk-free. It’s risk-shaped. The shape is one I’m comfortable with at the size I run it.</p>
+
+<h2 id="who-this-isnt-for">Who this isn’t for</h2>
+
+<p>The strategy works for a specific kind of operator with a specific kind of capital, and it doesn’t generalize down. If you recognize yourself in any of these, the right move is to find a different vehicle for your capital.</p>
+
+<ul>
+  <li><strong>Your stack isn’t large enough for the math to work.</strong> The carry produces a percentage spread, not a fixed dollar amount. Below a certain stack size, the absolute income doesn’t justify the operational overhead — gas costs, monitoring time, tax complexity, mental load. If your BTC position is small enough that a 5% drawdown wouldn’t change your sleep but the resulting carry wouldn’t change your life either, the strategy isn’t for you.</li>
+  <li><strong>Smart contract risk keeps you up at night.</strong> The structure depends on permissionless lending protocols continuing to function as designed. Aave and Morpho have years of operational history and significant audit footprints, and I’ve made my peace with the residual risk. Some people reasonably haven’t. If meaningful capital exposed to smart contract bugs, oracle failures, or governance attacks is something you’d lose sleep over, that’s information. Don’t override it.</li>
+  <li><strong>You’d panic-close in a real drawdown.</strong> The strategy survives a 50% drawdown if the operator doesn’t intervene at the worst moment. Operators who unwind the moment things look ugly turn a survivable drawdown into a realized loss — exactly the failure mode the structure was built to avoid. Self-knowledge matters more here than analytical understanding. If you’ve panic-sold before, you’ll panic-close this.</li>
+  <li><strong>This would be your survival capital, not your excess capital.</strong> The most important filter. A strategy that depends on not being forced to liquidate during drawdowns can only be run with capital you can afford to have at risk. If a bad year would mean rent issues, tuition issues, or runway issues, do not run it. The structure produces income on excess capital; it cannot turn working capital into something safer than it is.</li>
+  <li><strong>Your conviction in BTC is shakier than you’d like to admit.</strong> The quiet disqualifier most operators skip. The strategy borrows dollars against BTC and depends on the thesis playing out over multi-year horizons. Weak conviction shows up at the worst moments — selling collateral into drawdowns, closing the position when the carry compresses temporarily, second-guessing during macro volatility. The structure rewards conviction and punishes its absence. If you’re not sure where you stand, find out before building leverage on top of the position.</li>
+</ul>
+
+<h2 id="closing-thoughts">Closing thoughts</h2>
+
+<p>My sabbatical is funded by the structure described above. Bills paid, stack intact, distributions arriving monthly, tax bill absorbed without panic. None of that was hypothetical when I started writing this — it’s the actual operating reality of the past several months.</p>
+
+<p>Understanding the strategy and running it are different problems. The structure has many small decisions that aren’t visible at the level of a blog post: which lending protocol to use for which slice, how to size the wrap relative to the borrow, how to think about reserves across stablecoin vehicles, how to manage the off-ramp, when to delever and when to hold. Most of these don’t have right answers — they have answers that fit your situation, your tolerance, and your existing balance sheet. Working through them yourself is entirely possible. It’s also slower and more error-prone than working through them with someone who’s already operated through the relevant scenarios.</p>
+
+<p>A small number of operators have asked me to think through this with them for their own situations. Some of those conversations turn into ongoing structures; some turn into a single working session and a clean answer. If you’re considering whether something like this fits your capital, and you’d find it useful to work through it with someone who’s running it, I’m reachable at <strong>carry.degrading227@passmail.com</strong>. A brief note about your situation is more useful than a generic intro.</p>
+
+<p>Either way, the post above is the lay of the land. The case for not selling appreciated BTC during a sabbatical — or any other period of life that requires cash flow without principal erosion — stands on its own. I hope it’s useful.</p>
+
+<p>Disclosure: I used an LLM as an editing assistant for this essay, mainly for proofreading, wording, structure, and link suggestions. The strategy described here is my own, and I reviewed and approved the final text.</p>]]></content><author><name></name></author><summary type="html"><![CDATA[Disclaimer: This is not financial, tax, or investment advice. It is a description of how I structure my own balance sheet, with risks I understand and accept for my situation. Borrowing against BTC, using DeFi protocols, and buying preferred stocks can all lose money or create tax consequences. Do your own work and talk to qualified professionals before copying any part of this.]]></summary></entry><entry><title type="html">Breaking up with big tech: A year into homelabbing</title><link href="http://0.0.0.0:4000/2025/10/31/homelabbing.html" rel="alternate" type="text/html" title="Breaking up with big tech: A year into homelabbing" /><published>2025-10-31T10:31:00+00:00</published><updated>2025-10-31T10:31:00+00:00</updated><id>http://0.0.0.0:4000/2025/10/31/homelabbing</id><content type="html" xml:base="http://0.0.0.0:4000/2025/10/31/homelabbing.html"><![CDATA[<p>I have a completely random new hobby that I’ve picked up over the past year or so:</p>
 
 <p>Homelabbing.</p>
 
@@ -642,75 +756,4 @@ percent return, etc. I find it quite useful for my own trading so I decided to s
 
 <p>Feel free to reach out via email, <a href="https://twitter.com/huskly_finance">Twitter</a> or <a href="https://discord.gg/qpFA4druGB">Discord</a>
 if you want to give it a shot. I’be happy to provide access to anyone willing to provide feedback in
-return 😃 It will be most useful if you have a TD Ameritrade account, though.</p>]]></content><author><name></name></author><summary type="html"><![CDATA[Today I start building Huskly Finance in public. This is something I’ve been quietly working on during my free time, just as a hobby, for the past couple of years. The project started as “stocks.dog” but I’ve since rebranded since that name was temporary and mostly just playful and inaccurate. I’ve been building it just for myself since it helped me better understand how I was doing as a trader, which is a skill I’ve gotten more serious about learning and improving since the Covid pandemic started.]]></summary></entry><entry><title type="html">A new beginning</title><link href="http://0.0.0.0:4000/2022/08/27/a-new-beginning.html" rel="alternate" type="text/html" title="A new beginning" /><published>2022-08-27T09:23:00+00:00</published><updated>2022-08-27T09:23:00+00:00</updated><id>http://0.0.0.0:4000/2022/08/27/a-new-beginning</id><content type="html" xml:base="http://0.0.0.0:4000/2022/08/27/a-new-beginning.html"><![CDATA[<p>Two weeks ago today I decided to quit my job at QuickNode after exactly one year and one day. It was
-certainly a shorter amount of time than I had initially anticipated, but I feel pretty good about
-how much we’ve accomplished. I’ll cover here what actually got done, how it went and what’s coming
-next for me.</p>
-
-<p>I haven’t written a single blog post in almost a year, since my last <a href="https://felipecsl.com/2021/12/05/2021-retrospective.html">retrospective</a>.
-which is an indication of how busy I’ve been at QuickNode. We built <em>a lot of stuff</em> from the ground
-up and that took a big amount of energy and focus.</p>
-
-<h2 id="how-it-started">How it started</h2>
-
-<p>I initially joined QuickNode to work on the developer dashboard Rails app (the codebase that powers the
-<a href="https://quicknode.com">quicknode.com</a> website. When I joined we were just three people on that team and
-the entire company was probably around 15 people. When I left, one year later, the company had grown
-to over 90 people! That’s a ~6x growth, mostly
-in the last 6-8 months! As expected, there were some growth pains associated with that, as is the
-case with pretty much every startup that I’ve worked at.</p>
-
-<p>A few months after joining, I quickly shifted focus to work on a completely new product that QuickNode was
-building for Twitter at the time, which ended up becoming the current incarnation of the <a href="https://www.quicknode.com/nft-api">NFT API</a>.</p>
-
-<p>It started as a <a href="https://www.jsonrpc.org/specification">JSON RPC</a> API for NFT token ownership
-verification on Ethereum, so that Twitter could continuously ensure that users still owned the NFT
-tokens that they claimed as their profile avatars. This quickly grew to encompass a lot more than
-just ownership verification, including more features and other chains, like Solana, for example.
-We also built a brand new Ethereum blockchain indexer completely from scratch, which now powers both
-the NFT API and the, recently launched, Ethereum (fungible) <a href="https://www.quicknode.com/token-api">ERC-20 token API</a>.</p>
-
-<p>This was all accomplished in a matter of just a few months and released on time, in what I’d call a
-very smooth soft launch. We initially tested it with a small subset of early/beta testers, but this is now generally
-available and users can enable it as an add-on for their QuickNode endpoints. It has been live for a
-while now and generating a sizable chunk of additional company revenue from a brand new vertical,
-which now became the Developer Experience pillar. This was the inception of QuickNode’s “enhanced” APIs,
-which I’m incredibly proud to have led to production from beginning to end.</p>
-
-<h2 id="how-its-going">How it’s going</h2>
-
-<p>When I left QuickNode, this new APIs team we started had already grown to five people (it was just
-myself for the first few months). It felt bittersweet to leave this project and team behind, which was
-like a brainchild to me, but I really felt like this was the time for me to step back and reevaluate
-where I wanted to go next.</p>
-
-<p>QuickNode was also my first experience working as an Engineering Manager. Besides having managed a couple of
-interns while at Stripe, this was my first real hands-on experience as a manager, which
-is a skill I’ve been meaning to sharpen and practice more for a while now. It gave me a completely
-new perspective on how to add value not just as an individual contributor, but also by empowering the team to
-bring their best selves to work every day and feel productive and accomplished.</p>
-
-<p>I’m proud to say that our team felt really cohesive and we had a positive culture of open and honest
-communication. It’s not for me to say whether or not I did a good job playing that role though,
-but I’d like to believe that my teammates appreciated working with me in that capacity. At least that’s
-what they told me, so all I can do is to take their word for it 😊</p>
-
-<p>It’s now clear to me that a big part of being a manager is to remain selfless and to fully focus on
-my team’s happiness and productivity instead. In the end, companies are made of people and a manager’s
-role is to ensure that the people in their team have all the tools they need to be successful.</p>
-
-<h2 id="the-future">The future</h2>
-
-<p>I’m intentionally not gonna dive into the details and reasoning for departure in order to preserve
-company and the privacy of the people there. All I’ll say is that I’m rooting for QuickNode’s success
-and I think they are well positioned to be a top player in the web3 infrastructure space.</p>
-
-<p>A bear market is the perfect time to get our heads down and build, forget speculation, price
-action and FUD. It’s what will set apart companies that are well run from the rest. People who are
-in this space for the right reasons will continue to do so, irrespectively of these distractions.</p>
-
-<p>For me, I’ll continue to closely follow developments in crypto, DeFi, web3, Bitcoin, Ethereum, Solana,
-etc, as I’ve done so since 2014. For now, I’ll take some time to rest, experiment, learn, think, read,
-write, be bored, travel.</p>
-
-<p>I got a lot more stuff that I’m brewing in the meantime, so expect more updates here soon 🍻</p>]]></content><author><name></name></author><summary type="html"><![CDATA[Two weeks ago today I decided to quit my job at QuickNode after exactly one year and one day. It was certainly a shorter amount of time than I had initially anticipated, but I feel pretty good about how much we’ve accomplished. I’ll cover here what actually got done, how it went and what’s coming next for me.]]></summary></entry></feed>
+return 😃 It will be most useful if you have a TD Ameritrade account, though.</p>]]></content><author><name></name></author><summary type="html"><![CDATA[Today I start building Huskly Finance in public. This is something I’ve been quietly working on during my free time, just as a hobby, for the past couple of years. The project started as “stocks.dog” but I’ve since rebranded since that name was temporary and mostly just playful and inaccurate. I’ve been building it just for myself since it helped me better understand how I was doing as a trader, which is a skill I’ve gotten more serious about learning and improving since the Covid pandemic started.]]></summary></entry></feed>

@@ -78,13 +78,7 @@ The dial is set by how much you borrow against a given amount of collateral. Bor
 
 The reserve doesn't earn the full carry — it sits in conservative stablecoin vaults that produce a modest return, and that yield drag is real. I think of it as an insurance premium: it doesn't pay for itself in normal markets; it pays for itself by preventing the one moment in a decade when you'd otherwise be forced to make a bad decision. I size it at roughly 15-20% of outstanding debt — enough to absorb a significant drawdown without panic, small enough that the yield drag stays modest. Set this dial yourself based on your own drawdown tolerance and conviction.
 
-**3. The same-asset hedge.** This dial is structural rather than active, and it's the insight that makes the whole structure less fragile than it might look.
-
-The collateral is BTC. The debt is dollars. If BTC drops, the dollar value of the collateral falls but the dollar size of the debt is unchanged — that's what compresses HF. But here's the structural piece: if the goal is to _eventually unwind the loan in BTC terms_ (repay it from future BTC appreciation rather than from current dollar income), the BTC drawdown is exactly when the debt becomes cheaper in BTC terms. A loan that costs 1 BTC today costs 0.5 BTC if the price doubles, 2 BTC if it halves. The drawdown that's compressing your HF today is the same drawdown that's making the loan cheaper to repay tomorrow.
-
-This isn't a substitute for HF discipline — you still have to survive the drawdown to benefit from the recovery. But it reframes what the borrow actually is. You're not "in debt"; you're short dollars and long BTC, with a stablecoin liability whose BTC-denominated cost moves inversely to the asset you're long.
-
-**4. Carry compression.** Slower and less dramatic. The carry is what makes the structure economic. If borrow rates spike or distribution yields compress, the spread narrows. If it goes negative, the engine stops producing income and starts costing money to run.
+**3. Carry compression.** Slower and less dramatic. The carry is what makes the structure economic. If borrow rates spike or distribution yields compress, the spread narrows. If it goes negative, the engine stops producing income and starts costing money to run.
 
 The management is mostly attention: monitor borrow rates, watch issuer dynamics, be willing to delever or rotate if the carry collapses for structural rather than transient reasons. A short-term utilization spike is something to wait through; a sustained inversion is something to act on.
 

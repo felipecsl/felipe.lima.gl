@@ -16,9 +16,9 @@ layout: home
 <p class="section-label">[ now ]</p>
 
 <p>
-  back in seattle. running <a href="https://omarchy.org/">omarchy</a>, 
-  building a leveraged carry trade with defi and preferred shares 
-  of digital asset treasuries.
+  hacking everything with abliterated models, including
+  my Nintendo Switch. Playing with emulators and still running
+  a carry trade, now on Morpho fixed rate markets.
   more on the <a href="{{ '/now/' | relative_url }}">now page</a>.
 </p>
 

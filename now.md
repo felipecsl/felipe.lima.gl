@@ -7,8 +7,8 @@ permalink: /now/
 <p class="tertiary">2026.11 update</p>
 
 hacking everything with abliterated models, including
-my Switch. Playing with emulators and still running
-a carry trade, now on Morpho fixed rate markets.
+my switch. playing with emulators and still running
+a carry trade, now on morpho fixed rate markets.
 
 <p class="tertiary">2026.04 update</p>
 

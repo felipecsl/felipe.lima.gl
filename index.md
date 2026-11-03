@@ -17,8 +17,8 @@ layout: home
 
 <p>
   hacking everything with abliterated models, including
-  my Nintendo Switch. Playing with emulators and still running
-  a carry trade, now on Morpho fixed rate markets.
+  my nintendo switch. playing with emulators and still running
+  a carry trade, now on morpho fixed rate markets.
   more on the <a href="{{ '/now/' | relative_url }}">now page</a>.
 </p>
 

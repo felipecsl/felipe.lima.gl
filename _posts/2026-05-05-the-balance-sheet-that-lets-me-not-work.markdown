@@ -6,6 +6,8 @@ comments: true
 categories:
 ---
 
+> **Update (November 2026):** I wrote a [six-month update](https://huskly.finance/essays/carry-trade-h2-2026-update) on what changed and why.
+
 > _Disclaimer: This is not financial, tax, or investment advice. It is a description of how I structure my own balance sheet, with risks I understand and accept for my situation. Borrowing against BTC, using DeFi protocols, and buying preferred stocks can all lose money or create tax consequences. Do your own work and talk to qualified professionals before copying any part of this._
 
 I've never sold a single sat — not because I never needed cash, but because I never needed to sell to get it.
